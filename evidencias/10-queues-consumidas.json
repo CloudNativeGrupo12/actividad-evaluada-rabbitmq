@@ -1,0 +1,170 @@
+[
+  {
+    "arguments": {
+      "x-queue-type": "classic"
+    },
+    "auto_delete": false,
+    "consumer_capacity": 0.9999998045144268,
+    "consumer_utilisation": 0.9999998045146977,
+    "consumers": 1,
+    "durable": true,
+    "effective_policy_definition": {},
+    "exclusive": false,
+    "memory": 22176,
+    "message_bytes": 0,
+    "message_bytes_paged_out": 0,
+    "message_bytes_persistent": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_stats": {
+      "ack": 2,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 2,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 2,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "deliver_no_ack": 0,
+      "deliver_no_ack_details": {
+        "rate": 0.0
+      },
+      "get": 0,
+      "get_details": {
+        "rate": 0.0
+      },
+      "get_empty": 0,
+      "get_empty_details": {
+        "rate": 0.0
+      },
+      "get_no_ack": 0,
+      "get_no_ack_details": {
+        "rate": 0.0
+      },
+      "publish": 2,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 0,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_paged_out": 0,
+    "messages_persistent": 0,
+    "messages_ram": 0,
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_ready_ram": 0,
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged_ram": 0,
+    "name": "reservas.auditoria.queue",
+    "node": "rabbit@rabbitmq",
+    "reductions": 17371,
+    "reductions_details": {
+      "rate": 0.0
+    },
+    "state": "running",
+    "storage_version": 2,
+    "type": "classic",
+    "vhost": "/"
+  },
+  {
+    "arguments": {
+      "x-queue-type": "classic"
+    },
+    "auto_delete": false,
+    "consumer_capacity": 0.9999999068249145,
+    "consumer_utilisation": 0.999999906824979,
+    "consumers": 1,
+    "durable": true,
+    "effective_policy_definition": {},
+    "exclusive": false,
+    "memory": 22176,
+    "message_bytes": 0,
+    "message_bytes_paged_out": 0,
+    "message_bytes_persistent": 0,
+    "message_bytes_ram": 0,
+    "message_bytes_ready": 0,
+    "message_bytes_unacknowledged": 0,
+    "message_stats": {
+      "ack": 2,
+      "ack_details": {
+        "rate": 0.0
+      },
+      "deliver": 2,
+      "deliver_details": {
+        "rate": 0.0
+      },
+      "deliver_get": 2,
+      "deliver_get_details": {
+        "rate": 0.0
+      },
+      "deliver_no_ack": 0,
+      "deliver_no_ack_details": {
+        "rate": 0.0
+      },
+      "get": 0,
+      "get_details": {
+        "rate": 0.0
+      },
+      "get_empty": 0,
+      "get_empty_details": {
+        "rate": 0.0
+      },
+      "get_no_ack": 0,
+      "get_no_ack_details": {
+        "rate": 0.0
+      },
+      "publish": 2,
+      "publish_details": {
+        "rate": 0.0
+      },
+      "redeliver": 0,
+      "redeliver_details": {
+        "rate": 0.0
+      }
+    },
+    "messages": 0,
+    "messages_details": {
+      "rate": 0.0
+    },
+    "messages_paged_out": 0,
+    "messages_persistent": 0,
+    "messages_ram": 0,
+    "messages_ready": 0,
+    "messages_ready_details": {
+      "rate": 0.0
+    },
+    "messages_ready_ram": 0,
+    "messages_unacknowledged": 0,
+    "messages_unacknowledged_details": {
+      "rate": 0.0
+    },
+    "messages_unacknowledged_ram": 0,
+    "name": "reservas.notificaciones.queue",
+    "node": "rabbit@rabbitmq",
+    "reductions": 17535,
+    "reductions_details": {
+      "rate": 0.0
+    },
+    "state": "running",
+    "storage_version": 2,
+    "type": "classic",
+    "vhost": "/"
+  }
+]

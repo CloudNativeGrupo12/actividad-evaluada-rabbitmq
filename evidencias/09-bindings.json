@@ -1,0 +1,20 @@
+[
+  {
+    "source": "reservas.exchange",
+    "vhost": "/",
+    "destination": "reservas.auditoria.queue",
+    "destination_type": "queue",
+    "routing_key": "reserva.confirmada",
+    "arguments": {},
+    "properties_key": "reserva.confirmada"
+  },
+  {
+    "source": "reservas.exchange",
+    "vhost": "/",
+    "destination": "reservas.notificaciones.queue",
+    "destination_type": "queue",
+    "routing_key": "reserva.confirmada",
+    "arguments": {},
+    "properties_key": "reserva.confirmada"
+  }
+]

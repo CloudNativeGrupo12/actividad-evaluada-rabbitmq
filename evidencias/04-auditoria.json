@@ -1,0 +1,9 @@
+[
+  {
+    "EVENTO_ID": "55ca506e-d87a-4373-8532-de74ee73e690",
+    "RESERVA_ID": "051cc007-7a5f-447f-b2ed-d05740ee32c4",
+    "PAYLOAD": "{\"eventoId\":\"55ca506e-d87a-4373-8532-de74ee73e690\",\"tipoEvento\":\"ReservaConfirmada\",\"fechaEvento\":\"2026-10-05T18:22:43.891692279Z\",\"reservaId\":\"051cc007-7a5f-447f-b2ed-d05740ee32c4\",\"clienteId\":\"demo-f7e46533-cd94-49ac-b8c8-ba6f2715b814\",\"emailCliente\":\"cliente@example.com\",\"mesaId\":\"mesa-05\",\"fechaReserva\":\"2026-11-04\",\"horaInicio\":\"18:00:00\",\"horaFin\":\"20:00:00\",\"cantidadPersonas\":8,\"estado\":\"CONFIRMADA\"}",
+    "RESULTADO": "RESERVA_CONFIRMADA_REGISTRADA",
+    "PROCESADO_EN": "2026-10-05T18:23:16.272449Z"
+  }
+]

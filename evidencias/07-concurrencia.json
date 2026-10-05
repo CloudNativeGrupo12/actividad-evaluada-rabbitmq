@@ -1,0 +1,14 @@
+{
+  "solicitudes": 8,
+  "status": [
+    409,
+    201,
+    409,
+    409,
+    409,
+    409,
+    409,
+    409
+  ],
+  "resultado": "Una reserva aceptada y siete rechazadas"
+}

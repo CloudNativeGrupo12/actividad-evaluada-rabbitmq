@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS procesados (
+ evento_id VARCHAR(40) PRIMARY KEY, reserva_id VARCHAR(40) NOT NULL, payload CLOB NOT NULL,
+ resultado VARCHAR(300) NOT NULL, procesado_en TIMESTAMP WITH TIME ZONE NOT NULL);

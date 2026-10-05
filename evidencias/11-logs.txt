@@ -1,0 +1,200 @@
+ms-notificaciones-1  | 
+ms-disponibilidad-1  | 
+ms-disponibilidad-1  |   .   ____          _            __ _ _
+ms-disponibilidad-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-disponibilidad-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-disponibilidad-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-disponibilidad-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-disponibilidad-1  |  =========|_|==============|___/=/_/_/_/
+ms-disponibilidad-1  | 
+ms-disponibilidad-1  |  :: Spring Boot ::                (v3.5.7)
+ms-disponibilidad-1  | 
+ms-auditoria-1       | 
+ms-reservas-1        | 
+ms-disponibilidad-1  | 18:21:32.538 INFO  [main] c.r.d.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-reservas-1        |   .   ____          _            __ _ _
+ms-notificaciones-1  |   .   ____          _            __ _ _
+ms-auditoria-1       |   .   ____          _            __ _ _
+ms-auditoria-1       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-reservas-1        |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-reservas-1        | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-reservas-1        |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-reservas-1        |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-notificaciones-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-notificaciones-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-notificaciones-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-notificaciones-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-notificaciones-1  |  =========|_|==============|___/=/_/_/_/
+ms-notificaciones-1  | 
+ms-auditoria-1       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-disponibilidad-1  | 18:21:32.545 INFO  [main] c.r.d.Application - No active profile set, falling back to 1 default profile: "default"
+ms-disponibilidad-1  | 18:21:44.586 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8081 (http)
+ms-disponibilidad-1  | 18:21:44.744 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-disponibilidad-1  | 18:21:44.745 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-disponibilidad-1  | 18:21:45.173 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-disponibilidad-1  | 18:21:45.191 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12434 ms
+ms-reservas-1        |  =========|_|==============|___/=/_/_/_/
+ms-reservas-1        | 
+ms-reservas-1        |  :: Spring Boot ::                (v3.5.7)
+ms-reservas-1        | 
+ms-auditoria-1       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-auditoria-1       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-auditoria-1       |  =========|_|==============|___/=/_/_/_/
+ms-reservas-1        | 18:21:53.351 INFO  [main] c.r.reservas.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-disponibilidad-1  | 18:21:47.039 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-disponibilidad-1  | 18:21:50.853 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/disponibilidad user=SA
+ms-disponibilidad-1  | 18:21:50.866 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-disponibilidad-1  | 18:22:04.709 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-disponibilidad-1  | 18:22:05.703 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+ms-disponibilidad-1  | 18:22:05.924 INFO  [main] c.r.d.Application - Started Application in 35.524 seconds (process running for 38.237)
+ms-disponibilidad-1  | 18:22:30.824 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-disponibilidad-1  | 18:22:30.825 INFO  [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-notificaciones-1  |  :: Spring Boot ::                (v3.5.7)
+ms-notificaciones-1  | 
+ms-disponibilidad-1  | 18:22:30.831 INFO  [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 5 ms
+ms-disponibilidad-1  | 18:22:43.842 INFO  [http-nio-8081-exec-3] c.r.d.DisponibilidadController - MESA_ASIGNADA reservaId=051cc007-7a5f-447f-b2ed-d05740ee32c4 mesaId=mesa-05
+ms-disponibilidad-1  | 18:23:35.369 INFO  [http-nio-8081-exec-7] c.r.d.DisponibilidadController - MESA_ASIGNADA reservaId=ae32b6f4-30d8-4086-81a5-4a31f307ce43 mesaId=mesa-05
+ms-auditoria-1       | 
+ms-auditoria-1       |  :: Spring Boot ::                (v3.5.7)
+ms-auditoria-1       | 
+ms-auditoria-1       | 18:21:48.001 INFO  [main] c.r.auditoria.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-auditoria-1       | 18:21:48.067 INFO  [main] c.r.auditoria.Application - No active profile set, falling back to 1 default profile: "default"
+ms-auditoria-1       | 18:22:10.674 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8083 (http)
+ms-auditoria-1       | 18:22:10.799 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-auditoria-1       | 18:22:10.800 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-auditoria-1       | 18:22:11.158 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-auditoria-1       | 18:22:11.173 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 21908 ms
+ms-auditoria-1       | 18:22:14.469 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-auditoria-1       | 18:22:17.696 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/auditoria user=SA
+ms-auditoria-1       | 18:22:17.712 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-auditoria-1       | 18:22:24.963 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-auditoria-1       | 18:22:25.848 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+ms-auditoria-1       | 18:22:25.865 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-auditoria-1       | 18:22:26.424 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#acb5508:0/SimpleConnection@35b3c1f6 [delegate=amqp://reservas@172.19.0.2:5672/, localPort=51304]
+ms-auditoria-1       | 18:22:27.129 INFO  [main] c.r.auditoria.Application - Started Application in 46.61 seconds (process running for 49.905)
+ms-auditoria-1       | 18:22:36.235 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-auditoria-1       | 18:22:36.236 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-auditoria-1       | 18:22:36.239 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+ms-auditoria-1       | 18:22:39.214 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+ms-auditoria-1       | 18:22:40.034 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+ms-auditoria-1       | 18:22:40.036 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+ms-auditoria-1       | 18:22:40.042 INFO  [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+ms-auditoria-1       | 18:22:40.069 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ms-auditoria-1       | 18:22:40.102 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ms-auditoria-1       | 
+ms-auditoria-1       |   .   ____          _            __ _ _
+ms-auditoria-1       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-auditoria-1       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-auditoria-1       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-notificaciones-1  | 18:21:51.761 INFO  [main] c.r.n.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-auditoria-1       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-auditoria-1       |  =========|_|==============|___/=/_/_/_/
+ms-auditoria-1       | 
+ms-auditoria-1       |  :: Spring Boot ::                (v3.5.7)
+ms-notificaciones-1  | 18:21:51.812 INFO  [main] c.r.n.Application - No active profile set, falling back to 1 default profile: "default"
+ms-notificaciones-1  | 18:22:12.867 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8082 (http)
+ms-notificaciones-1  | 18:22:13.083 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-notificaciones-1  | 18:22:13.084 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-notificaciones-1  | 18:22:13.816 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-notificaciones-1  | 18:22:13.832 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 20839 ms
+ms-notificaciones-1  | 18:22:15.768 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-notificaciones-1  | 18:22:17.811 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/notificaciones user=SA
+ms-notificaciones-1  | 18:22:17.825 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-notificaciones-1  | 18:22:24.586 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-reservas-1        | 18:21:53.375 INFO  [main] c.r.reservas.Application - No active profile set, falling back to 1 default profile: "default"
+ms-notificaciones-1  | 18:22:25.244 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+ms-auditoria-1       | 
+ms-auditoria-1       | 18:22:58.966 INFO  [main] c.r.auditoria.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-reservas-1        | 18:22:14.849 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+ms-reservas-1        | 18:22:15.038 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-reservas-1        | 18:22:15.038 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-notificaciones-1  | 18:22:25.256 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-notificaciones-1  | 18:22:26.324 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#3ad847f8:0/SimpleConnection@21540255 [delegate=amqp://reservas@172.19.0.2:5672/, localPort=57256]
+ms-notificaciones-1  | 18:22:27.002 INFO  [main] c.r.n.Application - Started Application in 42.051 seconds (process running for 48.925)
+ms-notificaciones-1  | 18:22:33.451 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:22:33.452 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:22:33.458 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 5 ms
+ms-reservas-1        | 18:22:15.351 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-notificaciones-1  | 18:22:39.183 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+ms-auditoria-1       | 18:22:58.996 INFO  [main] c.r.auditoria.Application - No active profile set, falling back to 1 default profile: "default"
+ms-notificaciones-1  | 18:22:39.948 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+ms-auditoria-1       | 18:23:07.241 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8083 (http)
+ms-reservas-1        | 18:22:15.438 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 20811 ms
+ms-reservas-1        | 18:22:19.088 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-reservas-1        | 18:22:20.546 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/reservas user=SA
+ms-reservas-1        | 18:22:20.555 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-reservas-1        | 18:22:26.719 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-notificaciones-1  | 18:22:39.950 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+ms-notificaciones-1  | 18:22:39.958 INFO  [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+ms-auditoria-1       | 18:23:07.285 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-auditoria-1       | 18:23:07.285 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-auditoria-1       | 18:23:07.395 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-notificaciones-1  | 18:22:39.994 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ms-notificaciones-1  | 18:22:40.012 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ms-notificaciones-1  | 
+ms-notificaciones-1  |   .   ____          _            __ _ _
+ms-reservas-1        | 18:22:27.385 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+ms-notificaciones-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-notificaciones-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-auditoria-1       | 18:23:07.401 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8177 ms
+ms-auditoria-1       | 18:23:08.293 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-reservas-1        | 18:22:27.437 INFO  [main] c.r.reservas.Application - Started Application in 40.727 seconds (process running for 46.415)
+ms-reservas-1        | 18:22:27.938 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-auditoria-1       | 18:23:09.318 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/auditoria user=SA
+ms-auditoria-1       | 18:23:09.331 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-notificaciones-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-notificaciones-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-notificaciones-1  |  =========|_|==============|___/=/_/_/_/
+ms-reservas-1        | 18:22:27.939 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-reservas-1        | 18:22:27.943 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+ms-reservas-1        | 18:22:28.142 INFO  [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-auditoria-1       | 18:23:14.808 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-reservas-1        | 18:22:28.328 INFO  [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1de5cc88:0/SimpleConnection@38f5812b [delegate=amqp://reservas@172.19.0.2:5672/, localPort=54650]
+ms-reservas-1        | 18:22:43.228 INFO  [http-nio-8080-exec-2] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=051cc007-7a5f-447f-b2ed-d05740ee32c4 destino=ms-disponibilidad
+ms-reservas-1        | 18:22:43.987 INFO  [http-nio-8080-exec-2] c.r.r.ReservaPublisher - EVENTO_PUBLICADO eventoId=55ca506e-d87a-4373-8532-de74ee73e690 reservaId=051cc007-7a5f-447f-b2ed-d05740ee32c4 exchange=reservas.exchange routingKey=reserva.confirmada
+ms-auditoria-1       | 18:23:15.118 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+ms-auditoria-1       | 18:23:15.128 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-notificaciones-1  | 
+ms-notificaciones-1  |  :: Spring Boot ::                (v3.5.7)
+ms-notificaciones-1  | 
+ms-auditoria-1       | 18:23:15.397 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4fad51a3:0/SimpleConnection@58bad46f [delegate=amqp://reservas@172.19.0.2:5672/, localPort=35256]
+ms-auditoria-1       | 18:23:15.879 INFO  [main] c.r.auditoria.Application - Started Application in 18.958 seconds (process running for 21.439)
+ms-auditoria-1       | 18:23:16.329 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - AUDITORIA_PROCESADA eventoId=55ca506e-d87a-4373-8532-de74ee73e690 reservaId=051cc007-7a5f-447f-b2ed-d05740ee32c4 queue=reservas.auditoria.queue
+ms-notificaciones-1  | 18:22:58.406 INFO  [main] c.r.n.Application - Starting Application v1.0.0 using Java 21.0.12.1 with PID 1 (/app/app.jar started by ? in /app)
+ms-reservas-1        | 18:23:24.718 INFO  [http-nio-8080-exec-3] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=d44a33c0-673e-4290-8bfc-3ba168d1e24a destino=ms-disponibilidad
+ms-reservas-1        | 18:23:26.937 WARN  [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> cl.reservas.reservas.ReservaController.crear(cl.reservas.contratos.ReservaSolicitud): [Field error in object 'reservaSolicitud' on field 'horarioValido': rejected value [false]; codes [AssertTrue.reservaSolicitud.horarioValido,AssertTrue.horarioValido,AssertTrue.boolean,AssertTrue]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [reservaSolicitud.horarioValido,horarioValido]; arguments []; default message [horarioValido]]; default message [horaFin debe ser posterior a horaInicio]] ]
+ms-reservas-1        | 18:23:29.033 WARN  [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> cl.reservas.reservas.ReservaController.crear(cl.reservas.contratos.ReservaSolicitud): [Field error in object 'reservaSolicitud' on field 'emailCliente': rejected value [incorrecto]; codes [Email.reservaSolicitud.emailCliente,Email.emailCliente,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [reservaSolicitud.emailCliente,emailCliente]; arguments []; default message [emailCliente],[Ljakarta.validation.constraints.Pattern$Flag;@5419c627,.*]; default message [must be a well-formed email address]] ]
+ms-reservas-1        | 18:23:31.094 WARN  [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> cl.reservas.reservas.ReservaController.crear(cl.reservas.contratos.ReservaSolicitud): [Field error in object 'reservaSolicitud' on field 'cantidadPersonas': rejected value [0]; codes [Min.reservaSolicitud.cantidadPersonas,Min.cantidadPersonas,Min.int,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [reservaSolicitud.cantidadPersonas,cantidadPersonas]; arguments []; default message [cantidadPersonas],1]; default message [must be greater than or equal to 1]] ]
+ms-notificaciones-1  | 18:22:58.418 INFO  [main] c.r.n.Application - No active profile set, falling back to 1 default profile: "default"
+ms-notificaciones-1  | 18:23:06.680 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8082 (http)
+ms-notificaciones-1  | 18:23:06.764 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-notificaciones-1  | 18:23:06.765 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-notificaciones-1  | 18:23:06.915 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-auditoria-1       | 18:23:20.413 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-auditoria-1       | 18:23:20.414 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-auditoria-1       | 18:23:20.417 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+ms-notificaciones-1  | 18:23:06.922 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8103 ms
+ms-auditoria-1       | 18:23:35.426 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - AUDITORIA_PROCESADA eventoId=4c2e1d3d-47c2-4997-8348-0c8aaa591d4a reservaId=ae32b6f4-30d8-4086-81a5-4a31f307ce43 queue=reservas.auditoria.queue
+ms-reservas-1        | 18:23:33.155 WARN  [http-nio-8080-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> cl.reservas.reservas.ReservaController.crear(cl.reservas.contratos.ReservaSolicitud): [Field error in object 'reservaSolicitud' on field 'fechaReserva': rejected value [2020-01-01]; codes [FutureOrPresent.reservaSolicitud.fechaReserva,FutureOrPresent.fechaReserva,FutureOrPresent.java.time.LocalDate,FutureOrPresent]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [reservaSolicitud.fechaReserva,fechaReserva]; arguments []; default message [fechaReserva]]; default message [must be a date in the present or in the future]] ]
+ms-reservas-1        | 18:23:35.338 INFO  [http-nio-8080-exec-9] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=ae32b6f4-30d8-4086-81a5-4a31f307ce43 destino=ms-disponibilidad
+ms-notificaciones-1  | 18:23:07.943 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-notificaciones-1  | 18:23:08.923 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/notificaciones user=SA
+ms-reservas-1        | 18:23:35.339 INFO  [http-nio-8080-exec-1] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=4a3f419d-fd7e-48bc-afc9-839df5628412 destino=ms-disponibilidad
+ms-notificaciones-1  | 18:23:08.933 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-reservas-1        | 18:23:35.339 INFO  [http-nio-8080-exec-8] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=e7fb9113-83d4-4f50-9eb1-660dc08f21cf destino=ms-disponibilidad
+ms-reservas-1        | 18:23:35.338 INFO  [http-nio-8080-exec-10] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=5f9f152e-afdd-44dc-bbcd-503cc49538ac destino=ms-disponibilidad
+ms-notificaciones-1  | 18:23:14.475 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-reservas-1        | 18:23:35.371 INFO  [http-nio-8080-exec-3] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=eae3ffdb-6c4e-4ef0-846f-40888c5efc5c destino=ms-disponibilidad
+ms-notificaciones-1  | 18:23:14.952 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+ms-notificaciones-1  | 18:23:14.958 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-reservas-1        | 18:23:35.375 INFO  [http-nio-8080-exec-5] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=a925b41c-43c1-4295-a731-df0e11686094 destino=ms-disponibilidad
+ms-reservas-1        | 18:23:35.379 INFO  [http-nio-8080-exec-4] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=5cd3f3a1-07bc-42e7-a15b-69fa35b299cd destino=ms-disponibilidad
+ms-reservas-1        | 18:23:35.381 INFO  [http-nio-8080-exec-2] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=e9011b38-72b2-4db3-9e2b-da1b1809f3a6 destino=ms-disponibilidad
+ms-reservas-1        | 18:23:35.420 INFO  [http-nio-8080-exec-9] c.r.r.ReservaPublisher - EVENTO_PUBLICADO eventoId=4c2e1d3d-47c2-4997-8348-0c8aaa591d4a reservaId=ae32b6f4-30d8-4086-81a5-4a31f307ce43 exchange=reservas.exchange routingKey=reserva.confirmada
+ms-notificaciones-1  | 18:23:15.174 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7dd91ffc:0/SimpleConnection@32328dc4 [delegate=amqp://reservas@172.19.0.2:5672/, localPort=51786]
+ms-notificaciones-1  | 18:23:15.489 INFO  [main] c.r.n.Application - Started Application in 19.349 seconds (process running for 21.657)
+ms-notificaciones-1  | 18:23:16.803 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - NOTIFICACION_PROCESADA eventoId=55ca506e-d87a-4373-8532-de74ee73e690 reservaId=051cc007-7a5f-447f-b2ed-d05740ee32c4 queue=reservas.notificaciones.queue
+ms-notificaciones-1  | 18:23:18.055 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:23:18.056 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:23:18.058 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+ms-notificaciones-1  | 18:23:35.510 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - NOTIFICACION_PROCESADA eventoId=4c2e1d3d-47c2-4997-8348-0c8aaa591d4a reservaId=ae32b6f4-30d8-4086-81a5-4a31f307ce43 queue=reservas.notificaciones.queue

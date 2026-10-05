@@ -1,0 +1,27 @@
+[
+  {
+    "ID": "QbGdAMuq8gsx29NfYRFHGX",
+    "MessageID": "165750994.0.1791224596550@a4ee7670f3cb",
+    "Read": false,
+    "From": {
+      "Name": "",
+      "Address": "reservas@restaurante.local"
+    },
+    "To": [
+      {
+        "Name": "",
+        "Address": "cliente@example.com"
+      }
+    ],
+    "Cc": null,
+    "Bcc": null,
+    "ReplyTo": [],
+    "Subject": "Reserva confirmada 051cc007-7a5f-447f-b2ed-d05740ee32c4",
+    "Created": "2026-10-05T18:23:16.637Z",
+    "Username": "",
+    "Tags": [],
+    "Size": 705,
+    "Attachments": 0,
+    "Snippet": "Tu reserva está confirmada. Mesa: mesa-05 Fecha: 2026-11-04 Horario: 18:00 a 20:00 Personas: 8"
+  }
+]

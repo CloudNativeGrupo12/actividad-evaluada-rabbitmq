@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: cl.reservas.disponibilidad.DisponibilidadTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 35.87 s -- in cl.reservas.disponibilidad.DisponibilidadTest
+
+-------------------------------------------------------------------------------
+Test set: cl.reservas.reservas.ReservaServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.989 s -- in cl.reservas.reservas.ReservaServiceTest

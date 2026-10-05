@@ -1,0 +1,22 @@
+{
+  "arguments": {},
+  "auto_delete": false,
+  "durable": true,
+  "incoming": [],
+  "internal": false,
+  "message_stats": {
+    "publish_in": 2,
+    "publish_in_details": {
+      "rate": 0.2
+    },
+    "publish_out": 4,
+    "publish_out_details": {
+      "rate": 0.4
+    }
+  },
+  "name": "reservas.exchange",
+  "outgoing": [],
+  "type": "direct",
+  "user_who_performed_action": "reservas",
+  "vhost": "/"
+}

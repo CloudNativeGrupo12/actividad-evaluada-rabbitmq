@@ -1,0 +1,15 @@
+{
+  "fechaPrueba": "2026-10-05T18:23:46.435771+00:00",
+  "resultado": "OK",
+  "reservaId": "051cc007-7a5f-447f-b2ed-d05740ee32c4",
+  "eventoId": "55ca506e-d87a-4373-8532-de74ee73e690",
+  "pruebas": [
+    "201 con consumers detenidos",
+    "dos colas con mensaje pendiente",
+    "notificación SMTP local",
+    "registro de auditoría",
+    "409 sin disponibilidad",
+    "400 para cuatro entradas inválidas",
+    "concurrencia 1 de 8 aceptada"
+  ]
+}

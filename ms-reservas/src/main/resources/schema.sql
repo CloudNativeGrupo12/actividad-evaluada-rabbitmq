@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS reservas (reserva_id VARCHAR(40) PRIMARY KEY, evento_id VARCHAR(40) UNIQUE NOT NULL,
+ payload CLOB NOT NULL, publicacion VARCHAR(30) NOT NULL);

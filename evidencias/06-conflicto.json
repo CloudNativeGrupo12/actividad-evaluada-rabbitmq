@@ -1,0 +1,9 @@
+{
+  "status": 409,
+  "respuesta": {
+    "timestamp": "2026-10-05T18:23:24.867+00:00",
+    "status": 409,
+    "error": "Conflict",
+    "path": "/reservas"
+  }
+}

@@ -1,0 +1,71 @@
+name: reservas-rabbitmq
+x-app: &app
+  restart: unless-stopped
+  environment: &env
+    RABBIT_HOST: rabbitmq
+    RABBIT_USER: reservas
+    RABBIT_PASSWORD: reservas-demo
+  depends_on:
+    rabbitmq:
+      condition: service_healthy
+services:
+  rabbitmq:
+    image: rabbitmq:4.1.4-management
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: reservas
+      RABBITMQ_DEFAULT_PASS: reservas-demo
+    ports: ["127.0.0.1:5672:5672", "127.0.0.1:15672:15672"]
+    volumes: ["rabbit-data:/var/lib/rabbitmq"]
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+  mailpit:
+    image: axllent/mailpit:v1.27.10
+    ports: ["127.0.0.1:1025:1025", "127.0.0.1:8025:8025"]
+  ms-disponibilidad:
+    build: {context: ., args: {MODULE: ms-disponibilidad}}
+    environment:
+      DB_URL: jdbc:h2:file:/data/disponibilidad;DB_CLOSE_ON_EXIT=FALSE
+    ports: ["127.0.0.1:8081:8081"]
+    volumes: ["disponibilidad-data:/data"]
+  ms-reservas:
+    <<: *app
+    build: {context: ., args: {MODULE: ms-reservas}}
+    environment:
+      <<: *env
+      DISPONIBILIDAD_URL: http://ms-disponibilidad:8081
+      DB_URL: jdbc:h2:file:/data/reservas;DB_CLOSE_ON_EXIT=FALSE
+    ports: ["127.0.0.1:8080:8080"]
+    volumes: ["reservas-data:/data"]
+    depends_on:
+      rabbitmq: {condition: service_healthy}
+      ms-disponibilidad: {condition: service_started}
+  ms-notificaciones:
+    <<: *app
+    build: {context: ., args: {MODULE: ms-notificaciones}}
+    environment:
+      <<: *env
+      SMTP_HOST: mailpit
+      DB_URL: jdbc:h2:file:/data/notificaciones;DB_CLOSE_ON_EXIT=FALSE
+    ports: ["127.0.0.1:8082:8082"]
+    volumes: ["notificaciones-data:/data"]
+    depends_on:
+      rabbitmq: {condition: service_healthy}
+      mailpit: {condition: service_started}
+  ms-auditoria:
+    <<: *app
+    build: {context: ., args: {MODULE: ms-auditoria}}
+    environment:
+      <<: *env
+      DB_URL: jdbc:h2:file:/data/auditoria;DB_CLOSE_ON_EXIT=FALSE
+    ports: ["127.0.0.1:8083:8083"]
+    volumes: ["auditoria-data:/data"]
+volumes:
+  rabbit-data:
+  disponibilidad-data:
+  reservas-data:
+  notificaciones-data:
+  auditoria-data:
