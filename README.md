@@ -61,6 +61,14 @@ $reserva | ConvertTo-Json
 
 La respuesta normal es `201 Created`, `estado: CONFIRMADA` y `publicacion: PUBLICADA`. Conserva `reservaId` y `eventoId`: permiten seguir la misma operación en los logs y en los dos consumidores. Abre Mailpit para ver el correo de confirmación. El correo se envía por SMTP a ese buzón local, sin enviarlo a una cuenta externa.
 
+También puedes usar el script desde la raíz del repositorio:
+
+```powershell
+.\scripts\crear-reserva.ps1 -Fecha (Get-Date).AddDays(7) -HoraInicio '20:00' -HoraFin '21:30' -Personas 4
+```
+
+Si la mesa ya está ocupada, selecciona otro horario o fecha. El script muestra la respuesta y avisa cuando la publicación queda pendiente. Para probar los endpoints desde VS Code, abre [scripts/reservas.http](scripts/reservas.http) con REST Client y ajusta la variable `fecha`.
+
 ## Recorrido y topología
 
 ```mermaid
