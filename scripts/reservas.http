@@ -1,0 +1,38 @@
+# Abrir con REST Client en VS Code o un cliente compatible con archivos .http.
+# Cambiar la fecha por una futura y el horario por uno disponible antes del POST.
+@reservas = http://localhost:8080
+@disponibilidad = http://localhost:8081
+@notificaciones = http://localhost:8082
+@auditoria = http://localhost:8083
+@fecha = 2026-10-12
+
+### Estado del servicio principal
+GET {{reservas}}/actuator/health
+
+### Mesas del restaurante
+GET {{disponibilidad}}/mesas
+
+### Crear reserva
+POST {{reservas}}/reservas
+Content-Type: application/json
+
+{
+  "clienteId": "cli-demo",
+  "emailCliente": "cliente@example.com",
+  "fechaReserva": "{{fecha}}",
+  "horaInicio": "18:00",
+  "horaFin": "20:00",
+  "cantidadPersonas": 4
+}
+
+### Consultar reservas y estado de publicación
+GET {{reservas}}/reservas
+
+### Consultar asignaciones de mesas
+GET {{disponibilidad}}/asignaciones
+
+### Confirmaciones enviadas al buzón local Mailpit
+GET {{notificaciones}}/notificaciones
+
+### Auditoría de eventos procesados
+GET {{auditoria}}/auditoria
