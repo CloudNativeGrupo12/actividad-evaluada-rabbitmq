@@ -3,7 +3,10 @@ import cl.reservas.contratos.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.client.JdkClientHttpRequestFactory;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 import java.net.http.HttpClient;
 import java.time.Duration;
 @Component
@@ -15,8 +18,20 @@ public class DisponibilidadClient {
         http=RestClient.builder().baseUrl(url).requestFactory(factory).build();
     }
     public AsignacionRespuesta asignar(String id, ReservaSolicitud s) {
-        return http.post().uri("/asignaciones").body(new AsignacionSolicitud(id,s.fechaReserva(),s.horaInicio(),s.horaFin(),s.cantidadPersonas()))
-            .retrieve().body(AsignacionRespuesta.class);
+        var spec=http.post().uri("/asignaciones").body(new AsignacionSolicitud(id,s.fechaReserva(),s.horaInicio(),s.horaFin(),s.cantidadPersonas()));
+        reenviarToken(spec);
+        return spec.retrieve().body(AsignacionRespuesta.class);
     }
-    public void liberar(String id) { http.delete().uri("/asignaciones/{id}",id).retrieve().toBodilessEntity(); }
+    public void liberar(String id) {
+        var spec=http.delete().uri("/asignaciones/{id}",id);
+        reenviarToken(spec);
+        spec.retrieve().toBodilessEntity();
+    }
+    private void reenviarToken(RestClient.RequestHeadersSpec<?> spec) {
+        var atributos=RequestContextHolder.getRequestAttributes();
+        if (atributos instanceof ServletRequestAttributes sra) {
+            var cabecera=sra.getRequest().getHeader(HttpHeaders.AUTHORIZATION);
+            if (cabecera!=null && cabecera.startsWith("Bearer ")) spec.header(HttpHeaders.AUTHORIZATION,cabecera);
+        }
+    }
 }

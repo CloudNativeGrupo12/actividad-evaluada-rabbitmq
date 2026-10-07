@@ -1,16 +1,25 @@
 package cl.reservas.auditoria;
 import cl.reservas.contratos.*;
 import org.springframework.stereotype.Repository;
-import org.springframework.jdbc.core.JdbcTemplate;
 import java.time.OffsetDateTime;
 import java.util.*;
 @Repository
 public class RegistroRepository {
-    private final JdbcTemplate jdbc;
-    public RegistroRepository(JdbcTemplate jdbc) { this.jdbc=jdbc; }
-    public boolean existe(String eventoId) { return jdbc.queryForObject("SELECT COUNT(*) FROM procesados WHERE evento_id=?",Integer.class,eventoId)>0; }
+    private final ProcesadoRepository jpa;
+    public RegistroRepository(ProcesadoRepository jpa) { this.jpa=jpa; }
+    public boolean existe(String eventoId) { return jpa.existsById(eventoId); }
     public void guardar(ReservaConfirmada e,String payload,String resultado) {
-        jdbc.update("INSERT INTO procesados VALUES (?,?,?,?,?)",e.eventoId(),e.reservaId(),payload,resultado,OffsetDateTime.now());
+        jpa.save(new Procesado(e.eventoId(),e.reservaId(),payload,resultado,OffsetDateTime.now()));
     }
-    public List<Map<String,Object>> listar() { return jdbc.queryForList("SELECT * FROM procesados ORDER BY procesado_en DESC"); }
+    public List<Map<String,Object>> listar() {
+        return jpa.findAllByOrderByProcesadoEnDesc().stream().map(p -> {
+            Map<String,Object> fila=new LinkedHashMap<>();
+            fila.put("EVENTO_ID",p.getEventoId());
+            fila.put("RESERVA_ID",p.getReservaId());
+            fila.put("PAYLOAD",p.getPayload());
+            fila.put("RESULTADO",p.getResultado());
+            fila.put("PROCESADO_EN",p.getProcesadoEn());
+            return fila;
+        }).toList();
+    }
 }

@@ -63,6 +63,10 @@ services:
       DB_URL: jdbc:h2:file:/data/auditoria;DB_CLOSE_ON_EXIT=FALSE
     ports: ["127.0.0.1:8083:8083"]
     volumes: ["auditoria-data:/data"]
+  ms-admin-rabbitmq:
+    <<: *app
+    build: {context: ., args: {MODULE: ms-admin-rabbitmq}}
+    ports: ["127.0.0.1:8084:8084"]
 volumes:
   rabbit-data:
   disponibilidad-data:

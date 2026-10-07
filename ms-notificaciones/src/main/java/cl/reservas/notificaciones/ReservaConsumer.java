@@ -26,7 +26,7 @@ public class ReservaConsumer {
             log.info("NOTIFICACION_PROCESADA eventoId={} reservaId={} queue={}",evento.eventoId(),evento.reservaId(),RabbitTopology.NOTIFICACIONES);
         } catch (Exception ex) {
             log.error("MENSAJE_RECHAZADO queue={} mensajeId={} error={}",RabbitTopology.NOTIFICACIONES,mensaje.getMessageProperties().getMessageId(),ex.toString());
-            // Sin DLQ ni retries complejos: el error se registra y el mensaje se descarta.
+            log.error("DLQ_REDIRECT queue={} dlx={} dlq={} mensajeId={}",RabbitTopology.NOTIFICACIONES,RabbitTopology.DLX,RabbitTopology.DLQ,mensaje.getMessageProperties().getMessageId());
             canal.basicNack(tag,false,false);
         }
     }
