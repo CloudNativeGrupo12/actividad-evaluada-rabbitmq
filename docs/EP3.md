@@ -29,7 +29,7 @@ El [cierre de entrega y guion de presentación](ENTREGA_EP3.md) reúne los pendi
 - Cada dominio tiene entidades JPA, repositorios y una base propia. El perfil `cloud` recibe PostgreSQL por variables de entorno.
 - Microsoft Entra ID gestiona login; MSAL solicita `access_as_user`, procesa el redirect y adjunta el access token. Cada API valida firma, issuer, expiración y audience del JWT con Spring Security.
 - `.gitignore` excluye datos locales, dependencias, build y secretos. El `.env` no se entrega en GitHub.
-- Entrega: enlaces de ambos repositorios en AVA y copia al correo del docente. Este trabajo no envía correos ni publica los repositorios.
+- Código, documentación y evidencias publicados en la rama `feature/ep3-rubrica` de ambos repositorios; enlaces directos en [cierre de entrega](ENTREGA_EP3.md). Falta entregar esos enlaces en AVA y enviar copia al correo del docente.
 
 ## Configuración Azure mediante CLI
 

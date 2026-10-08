@@ -14,17 +14,17 @@ La implementación y sus evidencias se detallan en [EP3](EP3.md). Esta lista dis
 - [x] Validación de parámetros y errores claros; pruebas del administrador.
 - [x] `.env` y solicitudes AWS con secretos excluidos de Git y del contexto Docker.
 - [x] `.env.example` usa H2 en perfil local; ejemplos HTTP reciben bearer desde una variable de entorno.
+- [x] Revisar y publicar los cambios de ambos repositorios en `feature/ep3-rubrica`, incluyendo código, documentación y evidencias.
 
 ## Falta cerrar
 
-- [ ] Revisar y publicar los cambios de ambos repositorios. Actualmente están en `feature/ep3-rubrica`, sin commit ni push de esta adaptación.
 - [ ] Verificar que el docente tenga acceso al código actualizado en GitHub.
 - [ ] Confirmar los integrantes de la pareja: la pauta indica parejas y los informes históricos incluyen cuatro integrantes.
 - [ ] Confirmar en AVA la fecha y hora vigentes; el PDF tiene edición 2025 y no proporciona un plazo concreto para esta entrega.
 - [ ] Ensayar el recorrido siguiente y las explicaciones técnicas entre los dos integrantes.
 - [ ] Entregar los enlaces actualizados en AVA y enviar copia al correo del docente.
 
-Los remotos configurados son [backend](https://github.com/CloudNativeGrupo12/actividad-evaluada-rabbitmq) y [frontend](https://github.com/CloudNativeGrupo12/frontend-reservas). Estos enlaces por sí solos no acreditan que los cambios locales estén publicados. Antes de entregarlos, revisar en GitHub que contengan la versión EP3.
+La versión EP3 está publicada en [backend — rama EP3](https://github.com/CloudNativeGrupo12/actividad-evaluada-rabbitmq/tree/feature/ep3-rubrica) y [frontend — rama EP3](https://github.com/CloudNativeGrupo12/frontend-reservas/tree/feature/ep3-rubrica). Para entregar esta versión, usar esos enlaces directos a la rama. La integración a `main` se puede realizar posteriormente mediante pull requests.
 
 ## Guion para defender el proyecto
 

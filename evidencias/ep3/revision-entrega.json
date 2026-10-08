@@ -1,7 +1,9 @@
 {
-  "publicacion": "Adaptación EP3 sin commit ni push en ambos repositorios",
+  "publicacion": "Backend y frontend publicados en origin/feature/ep3-rubrica",
   "localTemplate": "Compose resuelve H2 para los cuatro dominios desde .env.example",
   "frontendBuild": "ng build production: success; URLs localhost reales",
   "fecha": "2026-10-08",
-  "azureScript": "Sintaxis PowerShell válida; nueva ejecución Graph requiere login por InteractionRequired"
+  "azureScript": "Sintaxis PowerShell válida; nueva ejecución Graph requiere login por InteractionRequired",
+  "codigoBackendCommit": "ca16053",
+  "frontendCommit": "f0e3f6a"
 }
