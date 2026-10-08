@@ -1,0 +1,80 @@
+{
+  "Fecha": "2026-10-08",
+  "Backend": {
+    "Build": "mvn package: BUILD SUCCESS",
+    "Tests": 50.0,
+    "Failures": 0.0,
+    "Errors": 0.0,
+    "Suites": [
+      {
+        "Name": "cl.reservas.contratos.RabbitTopologyTest",
+        "Tests": 1,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.admin.AdminControllerTest",
+        "Tests": 18,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.auditoria.AuditoriaServiceTest",
+        "Tests": 2,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.auditoria.ReservaConsumerTest",
+        "Tests": 7,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.disponibilidad.DisponibilidadTest",
+        "Tests": 4,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.disponibilidad.SecurityTest",
+        "Tests": 2,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.notificaciones.NotificacionServiceTest",
+        "Tests": 2,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.notificaciones.ReservaConsumerTest",
+        "Tests": 7,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.reservas.ReservaPublisherTest",
+        "Tests": 3,
+        "Failures": 0,
+        "Errors": 0
+      },
+      {
+        "Name": "cl.reservas.reservas.ReservaServiceTest",
+        "Tests": 4,
+        "Failures": 0,
+        "Errors": 0
+      }
+    ]
+  },
+  "Frontend": {
+    "Build": "ng build: success",
+    "Tests": 6,
+    "Failures": 0
+  },
+  "Cloud": {
+    "AWS": "RDS PostgreSQL 18.3 disponible; cuatro bases y reserva verificadas; persistencia tras reinicio verificada",
+    "Azure": "Login Azure CLI, Entra ID y llamadas JWT desde Angular verificados"
+  }
+}

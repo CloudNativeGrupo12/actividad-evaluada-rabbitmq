@@ -1,5 +1,15 @@
 # Sistema de reservas de mesas con RabbitMQ
 
+## Evaluación Parcial 3
+
+La versión actual prepara los ocho indicadores de la pauta EP3 de DSY1107. Consulta [la matriz de cumplimiento y guía de demostración](docs/EP3.md) para configuración Azure/AWS mediante CLI, pruebas y entrega. El backend ahora tiene cinco microservicios, JPA, JWT y DLQ; los informes anteriores conservan el estado de la actividad previa.
+
+Antes de iniciar Compose, ejecutar `scripts/configurar-azure.ps1` con una sesión Azure válida o crear `.env` a partir de `.env.example` y completar los identificadores. Todas las APIs de negocio requieren un access token de Entra ID, incluso en local. El perfil local usa H2 persistente y el perfil cloud usa cuatro bases PostgreSQL separadas.
+
+El 8 de octubre de 2026 se verificó el sistema con Azure Entra ID y RDS PostgreSQL real: reserva desde Angular, asignación, correo, auditoría y persistencia tras reiniciar los microservicios. La configuración local actual usa `cloud`; los comandos reproducibles y evidencias están en [EP3](docs/EP3.md).
+
+Los ejemplos HTTP y capturas de la guía histórica que aparecen a continuación deben ejecutarse con `Authorization: Bearer <access token>`. El script `crear-reserva.ps1` lo toma de `RESERVAS_ACCESS_TOKEN`. Los resultados históricos no verifican la versión EP3 actual.
+
 Sistema de reservas para un restaurante, implementado con Java y Spring Boot. Antes de confirmar una reserva, verifica y asigna una mesa mediante HTTP. Una vez confirmada, publica un evento en RabbitMQ para enviar el correo y registrar auditoría de forma independiente.
 
 La documentación de la actividad está separada de esta guía:

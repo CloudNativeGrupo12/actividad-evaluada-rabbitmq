@@ -2,3 +2,7 @@
 **/data
 .git
 evidencias
+.env
+.env.*
+.aws-rds-request.json
+.agents

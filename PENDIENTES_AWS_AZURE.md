@@ -1,7 +1,7 @@
 # PENDIENTES PARA CONFIGURAR AWS Y AZURE (Fase 6)
 
 ## Estado
-Servicios de AWS y Azure NO disponibles en este momento. Por ello, se han preparado los placeholders y configuraciones necesarias para completarlos posteriormente.
+Al 8 de octubre de 2026, Azure Entra ID tiene los registros API y SPA creados y aplicados al frontend y `.env` local; login, llamadas JWT desde Angular y sesión Azure CLI verificados. RDS `ep3-reservas-postgres` está disponible en `us-east-1`, con cuatro bases PostgreSQL 18.3 y los microservicios en perfil cloud. Se verificaron reserva, asignación, correo y auditoría, incluyendo persistencia después de reiniciar los cuatro microservicios. Usar los scripts, evidencias y configuración actual de [EP3](docs/EP3.md); los ejemplos de fases siguientes son antecedentes. Renovar las credenciales temporales al reiniciar el laboratorio y controlar el consumo de RDS.
 
 ## 1. Base de Datos PostgreSQL (AWS RDS)
 Para activar el perfil `cloud` con PostgreSQL:
@@ -50,7 +50,7 @@ Pendientes para despliegue cloud:
 - Actualizar `SPRING_PROFILES_ACTIVE=cloud` y variables en entorno AWS
 
 ## 4. Frontend (Angular + MSAL)
-Ver `docs/FRONTEND_SPEC.md`. Repositorio frontend pendiente de creación según roadmap Fase 5.
+Frontend implementado en el repositorio hermano `frontend-reservas`; login preparado para los registros Entra ID actuales. Ver `docs/FRONTEND_SPEC.md` y `docs/EP3.md`.
 
 ## Notas actuales
 - `compose.yaml` ya incluye `ms-admin-rabbitmq` (8084), `env_file: .env`, y `SPRING_PROFILES_ACTIVE` configurable.

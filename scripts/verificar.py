@@ -12,15 +12,19 @@ import time
 import urllib.request
 import urllib.error
 import uuid
+import os
 
 ROOT=Path(__file__).resolve().parents[1]
-EVIDENCIAS=ROOT/'evidencias'
+EVIDENCIAS=ROOT/'evidencias'/'ep3'
 EVIDENCIAS.mkdir(exist_ok=True)
-AUTH='Basic '+base64.b64encode(b'reservas:reservas-demo').decode()
+AUTH='Basic '+base64.b64encode((os.environ.get('RABBIT_USER','reservas')+':'+os.environ.get('RABBIT_PASSWORD','reservas-demo')).encode()).decode()
+MAIN_QUEUES={'reservas.notificaciones.queue','reservas.auditoria.queue'}
+TOKEN=os.environ.get('RESERVAS_ACCESS_TOKEN','')
 
 def http(url,data=None,auth=False):
     headers={'Content-Type':'application/json'}
     if auth: headers['Authorization']=AUTH
+    elif ':808' in url and TOKEN: headers['Authorization']='Bearer '+TOKEN
     req=urllib.request.Request(url,data=json.dumps(data).encode() if data is not None else None,headers=headers)
     try:
         with urllib.request.urlopen(req,timeout=20) as r:
@@ -45,6 +49,8 @@ def save(name,data):
     (EVIDENCIAS/name).write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 
 def main():
+    if not TOKEN:
+        raise SystemExit('Define RESERVAS_ACCESS_TOKEN con un access token de la SPA para access_as_user; no uses un ID token.')
     print('Esperando los cuatro servicios...')
     for port in [8080,8081,8082,8083]:
         wait(lambda p=port:http(f'http://localhost:{p}/actuator/health')[0]==200)
@@ -64,6 +70,7 @@ def main():
         def pendientes():
             status,queues=http('http://localhost:15672/api/queues/%2F',auth=True)
             if status!=200: return False
+            queues=[q for q in queues if q['name'] in MAIN_QUEUES]
             return queues if len(queues)==2 and all(q.get('messages_ready',0)>=1 and q.get('consumers')==0 for q in queues) else False
         queues=wait(pendientes,30)
         save('02-queues-pendientes.json',queues)
@@ -105,6 +112,7 @@ def main():
     wait(lambda:any(r.get('EVENTO_ID')==successful['eventoId'] for r in http('http://localhost:8083/auditoria')[1]))
     def colas_consumidas():
         status,queues=http('http://localhost:15672/api/queues/%2F',auth=True)
+        queues=[q for q in queues if q['name'] in MAIN_QUEUES] if status==200 else []
         return queues if status==200 and len(queues)==2 and all(q.get('messages',1)==0 and q.get('consumers',0)>=1 for q in queues) else False
     save('10-queues-consumidas.json',wait(colas_consumidas,30))
     (EVIDENCIAS/'11-logs.txt').write_text(docker('logs','--no-color','--tail','120','ms-reservas','ms-disponibilidad','ms-notificaciones','ms-auditoria'),encoding='utf-8')

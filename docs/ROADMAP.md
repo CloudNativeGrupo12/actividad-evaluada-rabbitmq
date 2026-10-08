@@ -3,8 +3,7 @@
 Plan de desarrollo para cumplir los requisitos de la evaluación parcial.
 Cada fase indica los archivos a crear o modificar y el criterio de aceptación.
 
-> **Estado actual:** Backend funcional con 4 microservicios, RabbitMQ básico (sin DLQ),
-> persistencia H2/JDBC, sin seguridad JWT, sin frontend Angular.
+> **Estado al 8 de octubre de 2026:** Backend con cinco microservicios, JPA, JWT y DLQ; frontend Angular implementado; login real con Entra ID y Azure CLI verificados. Maven package y 50 pruebas Java pasan, Angular compila y sus seis pruebas pasan. Compose y DLQ verificados. RDS PostgreSQL tiene cuatro bases activas; una reserva real desde Angular se verificó en todas ellas y persistió después de reiniciar los cuatro microservicios. La [matriz EP3](EP3.md) es la referencia para la pauta oficial. Las listas originales que siguen son antecedentes y no representan por sí solas el estado de implementación.
 
 ---
 

@@ -1,0 +1,5 @@
+[
+{"name":"reservas.notificaciones.queue","messages_ready":0,"consumers":1}
+,{"name":"reservas.auditoria.queue","messages_ready":0,"consumers":1}
+,{"name":"reservas.dlq","messages_ready":2,"consumers":0}
+]

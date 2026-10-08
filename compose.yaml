@@ -5,8 +5,8 @@ x-app: &app
     - .env
   environment: &env
     RABBIT_HOST: rabbitmq
-    RABBIT_USER: reservas
-    RABBIT_PASSWORD: reservas-demo
+    RABBIT_USER: ${RABBIT_USER:-reservas}
+    RABBIT_PASSWORD: ${RABBIT_PASSWORD:-reservas-demo}
     SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-local}
   depends_on:
     rabbitmq:
@@ -16,8 +16,8 @@ services:
     image: rabbitmq:4.1.4-management
     hostname: rabbitmq
     environment:
-      RABBITMQ_DEFAULT_USER: reservas
-      RABBITMQ_DEFAULT_PASS: reservas-demo
+      RABBITMQ_DEFAULT_USER: ${RABBIT_USER:-reservas}
+      RABBITMQ_DEFAULT_PASS: ${RABBIT_PASSWORD:-reservas-demo}
     ports: ["127.0.0.1:5672:5672", "127.0.0.1:15672:15672"]
     volumes: ["rabbit-data:/var/lib/rabbitmq"]
     healthcheck:
@@ -29,9 +29,11 @@ services:
     image: axllent/mailpit:v1.27.10
     ports: ["127.0.0.1:1025:1025", "127.0.0.1:8025:8025"]
   ms-disponibilidad:
+    <<: *app
     build: {context: ., args: {MODULE: ms-disponibilidad}}
     environment:
-      DB_URL: jdbc:h2:file:/data/disponibilidad;DB_CLOSE_ON_EXIT=FALSE
+      <<: *env
+      DB_URL: ${DISPONIBILIDAD_DB_URL:-jdbc:h2:file:/data/disponibilidad;DB_CLOSE_ON_EXIT=FALSE}
     ports: ["127.0.0.1:8081:8081"]
     volumes: ["disponibilidad-data:/data"]
   ms-reservas:
@@ -40,7 +42,7 @@ services:
     environment:
       <<: *env
       DISPONIBILIDAD_URL: http://ms-disponibilidad:8081
-      DB_URL: jdbc:h2:file:/data/reservas;DB_CLOSE_ON_EXIT=FALSE
+      DB_URL: ${RESERVAS_DB_URL:-jdbc:h2:file:/data/reservas;DB_CLOSE_ON_EXIT=FALSE}
     ports: ["127.0.0.1:8080:8080"]
     volumes: ["reservas-data:/data"]
     depends_on:
@@ -52,7 +54,7 @@ services:
     environment:
       <<: *env
       SMTP_HOST: mailpit
-      DB_URL: jdbc:h2:file:/data/notificaciones;DB_CLOSE_ON_EXIT=FALSE
+      DB_URL: ${NOTIFICACIONES_DB_URL:-jdbc:h2:file:/data/notificaciones;DB_CLOSE_ON_EXIT=FALSE}
     ports: ["127.0.0.1:8082:8082"]
     volumes: ["notificaciones-data:/data"]
     depends_on:
@@ -63,7 +65,7 @@ services:
     build: {context: ., args: {MODULE: ms-auditoria}}
     environment:
       <<: *env
-      DB_URL: jdbc:h2:file:/data/auditoria;DB_CLOSE_ON_EXIT=FALSE
+      DB_URL: ${AUDITORIA_DB_URL:-jdbc:h2:file:/data/auditoria;DB_CLOSE_ON_EXIT=FALSE}
     ports: ["127.0.0.1:8083:8083"]
     volumes: ["auditoria-data:/data"]
   ms-admin-rabbitmq:

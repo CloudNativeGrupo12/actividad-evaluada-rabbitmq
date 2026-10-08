@@ -1,0 +1,22 @@
+[
+  {
+    "estado": "UP",
+    "puerto": 8080
+  },
+  {
+    "estado": "UP",
+    "puerto": 8081
+  },
+  {
+    "estado": "UP",
+    "puerto": 8082
+  },
+  {
+    "estado": "UP",
+    "puerto": 8083
+  },
+  {
+    "estado": "UP",
+    "puerto": 8084
+  }
+]

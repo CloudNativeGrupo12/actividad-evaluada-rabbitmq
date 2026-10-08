@@ -1,0 +1,454 @@
+{
+  "colas": [
+    {
+      "arguments": {
+        "x-queue-type": "classic"
+      },
+      "auto_delete": false,
+      "consumer_capacity": 0,
+      "consumer_utilisation": 0,
+      "consumers": 0,
+      "durable": true,
+      "effective_policy_definition": {},
+      "exclusive": false,
+      "memory": 47400,
+      "message_bytes": 0,
+      "message_bytes_paged_out": 0,
+      "message_bytes_persistent": 0,
+      "message_bytes_ram": 0,
+      "message_bytes_ready": 0,
+      "message_bytes_unacknowledged": 0,
+      "messages": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_paged_out": 0,
+      "messages_persistent": 0,
+      "messages_ram": 0,
+      "messages_ready": 0,
+      "messages_ready_details": {
+        "rate": 0.0
+      },
+      "messages_ready_ram": 0,
+      "messages_unacknowledged": 0,
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_ram": 0,
+      "name": "ep3.demo.cola",
+      "node": "rabbit@rabbitmq",
+      "reductions": 7862,
+      "reductions_details": {
+        "rate": 0.0
+      },
+      "state": "running",
+      "storage_version": 2,
+      "type": "classic",
+      "vhost": "/"
+    },
+    {
+      "arguments": {
+        "x-dead-letter-exchange": "reservas.dlx",
+        "x-dead-letter-routing-key": "reservas.dlq",
+        "x-queue-type": "classic"
+      },
+      "auto_delete": false,
+      "consumer_capacity": 1.0,
+      "consumer_utilisation": 1.0,
+      "consumers": 1,
+      "durable": true,
+      "effective_policy_definition": {},
+      "exclusive": false,
+      "memory": 27080,
+      "message_bytes": 0,
+      "message_bytes_paged_out": 0,
+      "message_bytes_persistent": 0,
+      "message_bytes_ram": 0,
+      "message_bytes_ready": 0,
+      "message_bytes_unacknowledged": 0,
+      "message_stats": {
+        "ack": 1,
+        "ack_details": {
+          "rate": 0.0
+        },
+        "deliver": 2,
+        "deliver_details": {
+          "rate": 0.0
+        },
+        "deliver_get": 2,
+        "deliver_get_details": {
+          "rate": 0.0
+        },
+        "deliver_no_ack": 0,
+        "deliver_no_ack_details": {
+          "rate": 0.0
+        },
+        "get": 0,
+        "get_details": {
+          "rate": 0.0
+        },
+        "get_empty": 0,
+        "get_empty_details": {
+          "rate": 0.0
+        },
+        "get_no_ack": 0,
+        "get_no_ack_details": {
+          "rate": 0.0
+        },
+        "publish": 2,
+        "publish_details": {
+          "rate": 0.0
+        },
+        "redeliver": 0,
+        "redeliver_details": {
+          "rate": 0.0
+        }
+      },
+      "messages": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_paged_out": 0,
+      "messages_persistent": 0,
+      "messages_ram": 0,
+      "messages_ready": 0,
+      "messages_ready_details": {
+        "rate": 0.0
+      },
+      "messages_ready_ram": 0,
+      "messages_unacknowledged": 0,
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_ram": 0,
+      "name": "reservas.auditoria.queue",
+      "node": "rabbit@rabbitmq",
+      "reductions": 14347,
+      "reductions_details": {
+        "rate": 0.0
+      },
+      "state": "running",
+      "storage_version": 2,
+      "type": "classic",
+      "vhost": "/"
+    },
+    {
+      "arguments": {
+        "x-queue-type": "classic"
+      },
+      "auto_delete": false,
+      "consumer_capacity": 0,
+      "consumer_utilisation": 0,
+      "consumers": 0,
+      "durable": true,
+      "effective_policy_definition": {},
+      "exclusive": false,
+      "memory": 17008,
+      "message_bytes": 28,
+      "message_bytes_paged_out": 0,
+      "message_bytes_persistent": 28,
+      "message_bytes_ram": 14,
+      "message_bytes_ready": 28,
+      "message_bytes_unacknowledged": 0,
+      "messages": 2,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_paged_out": 0,
+      "messages_persistent": 2,
+      "messages_ram": 1,
+      "messages_ready": 2,
+      "messages_ready_details": {
+        "rate": 0.0
+      },
+      "messages_ready_ram": 1,
+      "messages_unacknowledged": 0,
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_ram": 0,
+      "name": "reservas.dlq",
+      "node": "rabbit@rabbitmq",
+      "reductions": 11050,
+      "reductions_details": {
+        "rate": 0.0
+      },
+      "state": "running",
+      "storage_version": 2,
+      "type": "classic",
+      "vhost": "/"
+    },
+    {
+      "arguments": {
+        "x-dead-letter-exchange": "reservas.dlx",
+        "x-dead-letter-routing-key": "reservas.dlq",
+        "x-queue-type": "classic"
+      },
+      "auto_delete": false,
+      "consumer_capacity": 1.0,
+      "consumer_utilisation": 1.0,
+      "consumers": 1,
+      "durable": true,
+      "effective_policy_definition": {},
+      "exclusive": false,
+      "memory": 27080,
+      "message_bytes": 0,
+      "message_bytes_paged_out": 0,
+      "message_bytes_persistent": 0,
+      "message_bytes_ram": 0,
+      "message_bytes_ready": 0,
+      "message_bytes_unacknowledged": 0,
+      "message_stats": {
+        "ack": 1,
+        "ack_details": {
+          "rate": 0.0
+        },
+        "deliver": 2,
+        "deliver_details": {
+          "rate": 0.0
+        },
+        "deliver_get": 2,
+        "deliver_get_details": {
+          "rate": 0.0
+        },
+        "deliver_no_ack": 0,
+        "deliver_no_ack_details": {
+          "rate": 0.0
+        },
+        "get": 0,
+        "get_details": {
+          "rate": 0.0
+        },
+        "get_empty": 0,
+        "get_empty_details": {
+          "rate": 0.0
+        },
+        "get_no_ack": 0,
+        "get_no_ack_details": {
+          "rate": 0.0
+        },
+        "publish": 2,
+        "publish_details": {
+          "rate": 0.0
+        },
+        "redeliver": 0,
+        "redeliver_details": {
+          "rate": 0.0
+        }
+      },
+      "messages": 0,
+      "messages_details": {
+        "rate": 0.0
+      },
+      "messages_paged_out": 0,
+      "messages_persistent": 0,
+      "messages_ram": 0,
+      "messages_ready": 0,
+      "messages_ready_details": {
+        "rate": 0.0
+      },
+      "messages_ready_ram": 0,
+      "messages_unacknowledged": 0,
+      "messages_unacknowledged_details": {
+        "rate": 0.0
+      },
+      "messages_unacknowledged_ram": 0,
+      "name": "reservas.notificaciones.queue",
+      "node": "rabbit@rabbitmq",
+      "reductions": 15077,
+      "reductions_details": {
+        "rate": 0.0
+      },
+      "state": "running",
+      "storage_version": 2,
+      "type": "classic",
+      "vhost": "/"
+    }
+  ],
+  "exchanges": [
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "",
+      "type": "direct",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "amq.direct",
+      "type": "direct",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "amq.fanout",
+      "type": "fanout",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "amq.headers",
+      "type": "headers",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "amq.match",
+      "type": "headers",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": true,
+      "name": "amq.rabbitmq.trace",
+      "type": "topic",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "amq.topic",
+      "type": "topic",
+      "user_who_performed_action": "rmq-internal",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "ep3.demo.exchange",
+      "type": "direct",
+      "user_who_performed_action": "reservas",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "name": "reservas.dlx",
+      "type": "fanout",
+      "user_who_performed_action": "reservas",
+      "vhost": "/"
+    },
+    {
+      "arguments": {},
+      "auto_delete": false,
+      "durable": true,
+      "internal": false,
+      "message_stats": {
+        "publish_in": 2,
+        "publish_in_details": {
+          "rate": 0.0
+        },
+        "publish_out": 4,
+        "publish_out_details": {
+          "rate": 0.0
+        }
+      },
+      "name": "reservas.exchange",
+      "type": "direct",
+      "user_who_performed_action": "reservas",
+      "vhost": "/"
+    }
+  ],
+  "bindings": [
+    {
+      "source": "",
+      "vhost": "/",
+      "destination": "ep3.demo.cola",
+      "destination_type": "queue",
+      "routing_key": "ep3.demo.cola",
+      "arguments": {},
+      "properties_key": "ep3.demo.cola"
+    },
+    {
+      "source": "",
+      "vhost": "/",
+      "destination": "reservas.auditoria.queue",
+      "destination_type": "queue",
+      "routing_key": "reservas.auditoria.queue",
+      "arguments": {},
+      "properties_key": "reservas.auditoria.queue"
+    },
+    {
+      "source": "",
+      "vhost": "/",
+      "destination": "reservas.dlq",
+      "destination_type": "queue",
+      "routing_key": "reservas.dlq",
+      "arguments": {},
+      "properties_key": "reservas.dlq"
+    },
+    {
+      "source": "",
+      "vhost": "/",
+      "destination": "reservas.notificaciones.queue",
+      "destination_type": "queue",
+      "routing_key": "reservas.notificaciones.queue",
+      "arguments": {},
+      "properties_key": "reservas.notificaciones.queue"
+    },
+    {
+      "source": "ep3.demo.exchange",
+      "vhost": "/",
+      "destination": "ep3.demo.cola",
+      "destination_type": "queue",
+      "routing_key": "ep3.demo",
+      "arguments": {},
+      "properties_key": "ep3.demo"
+    },
+    {
+      "source": "reservas.dlx",
+      "vhost": "/",
+      "destination": "reservas.dlq",
+      "destination_type": "queue",
+      "routing_key": "",
+      "arguments": {},
+      "properties_key": "~"
+    },
+    {
+      "source": "reservas.exchange",
+      "vhost": "/",
+      "destination": "reservas.auditoria.queue",
+      "destination_type": "queue",
+      "routing_key": "reserva.confirmada",
+      "arguments": {},
+      "properties_key": "reserva.confirmada"
+    },
+    {
+      "source": "reservas.exchange",
+      "vhost": "/",
+      "destination": "reservas.notificaciones.queue",
+      "destination_type": "queue",
+      "routing_key": "reserva.confirmada",
+      "arguments": {},
+      "properties_key": "reserva.confirmada"
+    }
+  ]
+}

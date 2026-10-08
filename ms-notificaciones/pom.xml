@@ -16,6 +16,7 @@
   <description>Microservicio de notificaciones por correo</description>
 
   <dependencies>
+    <dependency><groupId>org.springframework.retry</groupId><artifactId>spring-retry</artifactId></dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>

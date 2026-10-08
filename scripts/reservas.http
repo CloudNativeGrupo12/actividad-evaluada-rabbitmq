@@ -1,5 +1,7 @@
 # Abrir con REST Client en VS Code o un cliente compatible con archivos .http.
 # Cambiar la fecha por una futura y el horario por uno disponible antes del POST.
+# Definir RESERVAS_ACCESS_TOKEN en el entorno local de REST Client; no guardar tokens aquí.
+@accessToken = {{$processEnv RESERVAS_ACCESS_TOKEN}}
 @reservas = http://localhost:8080
 @disponibilidad = http://localhost:8081
 @notificaciones = http://localhost:8082
@@ -11,10 +13,12 @@ GET {{reservas}}/actuator/health
 
 ### Mesas del restaurante
 GET {{disponibilidad}}/mesas
+Authorization: Bearer {{accessToken}}
 
 ### Crear reserva
 POST {{reservas}}/reservas
 Content-Type: application/json
+Authorization: Bearer {{accessToken}}
 
 {
   "clienteId": "cli-demo",
@@ -27,12 +31,16 @@ Content-Type: application/json
 
 ### Consultar reservas y estado de publicación
 GET {{reservas}}/reservas
+Authorization: Bearer {{accessToken}}
 
 ### Consultar asignaciones de mesas
 GET {{disponibilidad}}/asignaciones
+Authorization: Bearer {{accessToken}}
 
 ### Confirmaciones enviadas al buzón local Mailpit
 GET {{notificaciones}}/notificaciones
+Authorization: Bearer {{accessToken}}
 
 ### Auditoría de eventos procesados
 GET {{auditoria}}/auditoria
+Authorization: Bearer {{accessToken}}

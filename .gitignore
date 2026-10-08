@@ -1,6 +1,7 @@
 **/target/
 **/data/
 .env
+.aws-rds-request.json
 *.iml
 .idea/
 .vscode/

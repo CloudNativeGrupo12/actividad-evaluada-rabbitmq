@@ -1,5 +1,7 @@
 # Informe de implementación del sistema de reservas de mesas
 
+> Informe histórico de la demostración del 5 de octubre de 2026. El código evolucionó a JPA, JWT, DLQ y cinco microservicios. Para la Evaluación Parcial 3 y las evidencias actuales, consultar [EP3](EP3.md).
+
 **Asignatura:** Desarrollo Cloud Native I  
 **Actividad:** Comunicación síncrona y asíncrona con RabbitMQ  
 **Parte 2:** Implementación  

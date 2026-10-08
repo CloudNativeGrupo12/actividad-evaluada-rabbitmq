@@ -1,0 +1,12 @@
+{
+    "Id": "ep3-reservas-postgres",
+    "Status": "available",
+    "Engine": "postgres",
+    "Version": "18.3",
+    "Class": "db.t3.micro",
+    "Encrypted": true,
+    "MultiAZ": false,
+    "Storage": 20,
+    "Endpoint": "ep3-reservas-postgres.c5amoia2y5ve.us-east-1.rds.amazonaws.com",
+    "BackupRetentionDays": 1
+}

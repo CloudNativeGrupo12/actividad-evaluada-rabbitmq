@@ -1,0 +1,247 @@
+ms-disponibilidad-1  |
+ms-disponibilidad-1  |   .   ____          _            __ _ _
+ms-reservas-1        |
+ms-notificaciones-1  | 18:11:05.648 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-reservas-1        |   .   ____          _            __ _ _
+ms-admin-rabbitmq-1  |
+ms-auditoria-1       | 18:11:04.966 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-admin-rabbitmq-1  |   .   ____          _            __ _ _
+ms-reservas-1        |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-reservas-1        | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-notificaciones-1  | 18:11:05.703 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#46374b8:0/SimpleConnection@6ce365b7 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=46480]
+ms-disponibilidad-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-auditoria-1       | 18:11:05.081 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#39adf4e6:0/SimpleConnection@7aa4ef24 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=41782]
+ms-auditoria-1       | 18:11:05.272 INFO  [main] c.r.auditoria.Application - Started Application in 13.216 seconds (process running for 13.996)
+ms-auditoria-1       | 18:11:26.397 INFO  [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-auditoria-1       | 18:11:26.397 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:11:05.763 INFO  [main] c.r.n.Application - Started Application in 13.747 seconds (process running for 14.449)
+ms-notificaciones-1  | 18:11:24.230 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-notificaciones-1  | 18:11:24.230 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-auditoria-1       | 18:11:26.398 INFO  [http-nio-8083-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ms-auditoria-1       | 18:11:38.349 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - MENSAJE_RECHAZADO queue=reservas.auditoria.queue mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa error=com.fasterxml.jackson.core.JsonParseException: Unexpected character ('j' (code 106)): was expecting double-quote to start field name
+ms-auditoria-1       |  at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]
+ms-admin-rabbitmq-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-admin-rabbitmq-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-admin-rabbitmq-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-admin-rabbitmq-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-admin-rabbitmq-1  |  =========|_|==============|___/=/_/_/_/
+ms-admin-rabbitmq-1  |
+ms-admin-rabbitmq-1  |  :: Spring Boot ::                (v3.5.7)
+ms-disponibilidad-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-disponibilidad-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-disponibilidad-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-disponibilidad-1  |  =========|_|==============|___/=/_/_/_/
+ms-disponibilidad-1  |
+ms-disponibilidad-1  |  :: Spring Boot ::                (v3.5.7)
+ms-notificaciones-1  | 18:11:24.230 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 0 ms
+ms-auditoria-1       | 18:11:38.349 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - DLQ_REDIRECT queue=reservas.auditoria.queue dlx=reservas.dlx dlq=reservas.dlq mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa
+ms-notificaciones-1  | 18:11:38.352 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - MENSAJE_RECHAZADO queue=reservas.notificaciones.queue mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa error=com.fasterxml.jackson.core.JsonParseException: Unexpected character ('j' (code 106)): was expecting double-quote to start field name
+ms-notificaciones-1  |  at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 2]
+ms-notificaciones-1  | 18:11:38.352 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - DLQ_REDIRECT queue=reservas.notificaciones.queue dlx=reservas.dlx dlq=reservas.dlq mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa
+ms-notificaciones-1  | 18:12:24.900 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - NOTIFICACION_PROCESADA eventoId=efc08593-7092-42b4-9be6-a3fb765e4595 reservaId=e66326b4-87e3-486e-b619-fa054089a3cf queue=reservas.notificaciones.queue
+ms-notificaciones-1  | 18:18:23.486 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+ms-notificaciones-1  | 18:18:23.979 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+ms-admin-rabbitmq-1  |
+ms-admin-rabbitmq-1  | 18:10:53.671 INFO  [main] c.r.admin.Application - Starting Application v1.0.0 using Java 21.0.11 with PID 1 (/app/app.jar started by ? in /app)
+ms-admin-rabbitmq-1  | 18:10:53.759 INFO  [main] c.r.admin.Application - The following 1 profile is active: "local"
+ms-admin-rabbitmq-1  | 18:10:57.636 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8084 (http)
+ms-admin-rabbitmq-1  | 18:10:57.671 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-auditoria-1       | 18:12:24.868 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - AUDITORIA_PROCESADA eventoId=efc08593-7092-42b4-9be6-a3fb765e4595 reservaId=e66326b4-87e3-486e-b619-fa054089a3cf queue=reservas.auditoria.queue
+ms-auditoria-1       | 18:18:23.487 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+ms-auditoria-1       | 18:18:24.012 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+ms-auditoria-1       | 18:18:24.013 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+ms-admin-rabbitmq-1  | 18:10:57.671 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-admin-rabbitmq-1  | 18:10:57.707 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-disponibilidad-1  |
+ms-disponibilidad-1  | 18:10:53.612 INFO  [main] c.r.d.Application - Starting Application v1.0.0 using Java 21.0.11 with PID 1 (/app/app.jar started by ? in /app)
+ms-disponibilidad-1  | 18:10:53.626 INFO  [main] c.r.d.Application - The following 1 profile is active: "local"
+ms-disponibilidad-1  | 18:10:57.464 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ms-admin-rabbitmq-1  | 18:10:57.708 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3101 ms
+ms-disponibilidad-1  | 18:10:57.652 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 133 ms. Found 2 JPA repository interfaces.
+ms-auditoria-1       | 18:18:24.017 INFO  [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+ms-admin-rabbitmq-1  | 18:10:59.890 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-admin-rabbitmq-1  | 18:11:01.348 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8084 (http) with context path '/'
+ms-admin-rabbitmq-1  | 18:11:01.379 INFO  [main] c.r.admin.Application - Started Application in 8.942 seconds (process running for 10.107)
+ms-auditoria-1       | 18:18:24.032 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ms-auditoria-1       | 18:18:24.036 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ms-auditoria-1       | 18:18:24.049 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ms-auditoria-1       |
+ms-auditoria-1       |   .   ____          _            __ _ _
+ms-auditoria-1       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-auditoria-1       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-auditoria-1       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-admin-rabbitmq-1  | 18:11:28.551 INFO  [http-nio-8084-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-admin-rabbitmq-1  | 18:11:28.551 INFO  [http-nio-8084-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-admin-rabbitmq-1  | 18:11:28.552 INFO  [http-nio-8084-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ms-admin-rabbitmq-1  | 18:11:28.586 INFO  [http-nio-8084-exec-1] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: rabbitmq:5672
+ms-admin-rabbitmq-1  | 18:11:28.614 INFO  [http-nio-8084-exec-1] o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#6c8fe7a4:0/SimpleConnection@52e61891 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=59874]
+ms-admin-rabbitmq-1  | 18:16:22.683 INFO  [http-nio-8084-exec-4] c.r.a.RabbitAdminService - COLA_CREADA nombre=ep3.demo.cola durable=true
+ms-admin-rabbitmq-1  | 18:16:28.344 INFO  [http-nio-8084-exec-6] c.r.a.RabbitAdminService - EXCHANGE_CREADO nombre=ep3.demo.exchange tipo=direct
+ms-admin-rabbitmq-1  | 18:16:35.185 INFO  [http-nio-8084-exec-8] c.r.a.RabbitAdminService - BINDING_CREADO queue=ep3.demo.cola exchange=ep3.demo.exchange routingKey=ep3.demo
+ms-admin-rabbitmq-1  | 18:17:06.921 INFO  [http-nio-8084-exec-10] c.r.a.RabbitAdminService - BINDING_ELIMINADO queue=ep3.demo.cola exchange=ep3.demo.exchange routingKey=ep3.demo
+ms-admin-rabbitmq-1  | 18:17:13.550 INFO  [http-nio-8084-exec-2] c.r.a.RabbitAdminService - COLA_ELIMINADA nombre=ep3.demo.cola
+ms-admin-rabbitmq-1  | 18:17:13.867 INFO  [http-nio-8084-exec-4] c.r.a.RabbitAdminService - EXCHANGE_ELIMINADO nombre=ep3.demo.exchange
+ms-reservas-1        |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-reservas-1        |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-reservas-1        |  =========|_|==============|___/=/_/_/_/
+ms-reservas-1        |
+ms-reservas-1        |  :: Spring Boot ::                (v3.5.7)
+ms-reservas-1        |
+ms-reservas-1        | 18:10:55.306 INFO  [main] c.r.reservas.Application - Starting Application v1.0.0 using Java 21.0.11 with PID 1 (/app/app.jar started by ? in /app)
+ms-reservas-1        | 18:10:55.308 INFO  [main] c.r.reservas.Application - The following 1 profile is active: "local"
+ms-reservas-1        | 18:10:58.157 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ms-reservas-1        | 18:10:58.200 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+ms-reservas-1        | 18:10:59.727 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http)
+ms-reservas-1        | 18:10:59.734 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-reservas-1        | 18:10:59.735 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-reservas-1        | 18:10:59.755 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-reservas-1        | 18:10:59.756 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4347 ms
+ms-reservas-1        | 18:11:00.109 INFO  [main] o.h.j.i.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ms-reservas-1        | 18:11:00.156 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+ms-reservas-1        | 18:11:00.186 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+ms-reservas-1        | 18:11:00.611 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+ms-reservas-1        | 18:11:00.632 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-reservas-1        | 18:11:01.354 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/reservas user=SA
+ms-reservas-1        | 18:11:01.372 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-reservas-1        | 18:11:01.460 INFO  [main] o.h.o.connections.pooling - HHH10001005: Database info:
+ms-reservas-1        | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+ms-reservas-1        | 	Database driver: undefined/unknown
+ms-reservas-1        | 	Database version: 2.3.232
+ms-reservas-1        | 	Autocommit mode: undefined/unknown
+ms-reservas-1        | 	Isolation level: undefined/unknown
+ms-reservas-1        | 	Minimum pool size: undefined/unknown
+ms-reservas-1        | 	Maximum pool size: undefined/unknown
+ms-reservas-1        | 18:11:02.251 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ms-reservas-1        | 18:11:02.303 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ms-reservas-1        | 18:11:03.659 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ms-reservas-1        | 18:11:04.130 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-reservas-1        | 18:11:04.892 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+ms-reservas-1        | 18:11:04.905 INFO  [main] c.r.reservas.Application - Started Application in 10.669 seconds (process running for 12.098)
+ms-reservas-1        | 18:11:19.807 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-reservas-1        | 18:11:19.807 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-reservas-1        | 18:11:19.808 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ms-reservas-1        | 18:11:19.844 INFO  [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-reservas-1        | 18:11:19.877 INFO  [http-nio-8080-exec-1] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1134a934:0/SimpleConnection@120ed661 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=42670]
+ms-reservas-1        | 18:12:23.965 INFO  [http-nio-8080-exec-7] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=e66326b4-87e3-486e-b619-fa054089a3cf destino=ms-disponibilidad
+ms-reservas-1        | 18:12:24.227 INFO  [http-nio-8080-exec-7] c.r.r.ReservaPublisher - EVENTO_PUBLICADO eventoId=efc08593-7092-42b4-9be6-a3fb765e4595 reservaId=e66326b4-87e3-486e-b619-fa054089a3cf exchange=reservas.exchange routingKey=reserva.confirmada
+ms-reservas-1        | 18:18:34.144 INFO  [http-nio-8080-exec-6] c.r.r.ReservaService - VALIDACION_SINCRONA reservaId=206c3157-0e04-4d2c-9693-832261f34a2b destino=ms-disponibilidad
+ms-reservas-1        | 18:18:34.823 INFO  [http-nio-8080-exec-6] c.r.r.ReservaPublisher - EVENTO_PUBLICADO eventoId=ec1c33df-a1d4-43c7-8b1f-dbbcfa8c9066 reservaId=206c3157-0e04-4d2c-9693-832261f34a2b exchange=reservas.exchange routingKey=reserva.confirmada
+ms-notificaciones-1  | 18:18:23.981 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+ms-notificaciones-1  | 18:18:23.987 INFO  [tomcat-shutdown] o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+ms-notificaciones-1  | 18:18:24.003 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ms-notificaciones-1  | 18:18:24.009 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ms-notificaciones-1  | 18:18:24.023 INFO  [SpringApplicationShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ms-notificaciones-1  |
+ms-notificaciones-1  |   .   ____          _            __ _ _
+ms-notificaciones-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+ms-notificaciones-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ms-notificaciones-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+ms-notificaciones-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-notificaciones-1  |  =========|_|==============|___/=/_/_/_/
+ms-notificaciones-1  |
+ms-notificaciones-1  |  :: Spring Boot ::                (v3.5.7)
+ms-notificaciones-1  |
+ms-notificaciones-1  | 18:19:00.250 INFO  [main] c.r.n.Application - Starting Application v1.0.0 using Java 21.0.11 with PID 1 (/app/app.jar started by ? in /app)
+ms-notificaciones-1  | 18:19:00.251 INFO  [main] c.r.n.Application - The following 1 profile is active: "local"
+ms-notificaciones-1  | 18:19:02.173 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ms-notificaciones-1  | 18:19:02.234 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+ms-notificaciones-1  | 18:19:03.116 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8082 (http)
+ms-notificaciones-1  | 18:19:03.136 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-notificaciones-1  | 18:19:03.136 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-notificaciones-1  | 18:19:03.171 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-notificaciones-1  | 18:19:03.171 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2808 ms
+ms-notificaciones-1  | 18:19:03.510 INFO  [main] o.h.j.i.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ms-notificaciones-1  | 18:19:03.569 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+ms-notificaciones-1  | 18:19:03.639 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+ms-notificaciones-1  | 18:19:04.026 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+ms-notificaciones-1  | 18:19:04.046 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-notificaciones-1  | 18:19:04.231 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/notificaciones user=SA
+ms-notificaciones-1  | 18:19:04.232 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-notificaciones-1  | 18:19:04.274 INFO  [main] o.h.o.connections.pooling - HHH10001005: Database info:
+ms-notificaciones-1  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+ms-notificaciones-1  | 	Database driver: undefined/unknown
+ms-notificaciones-1  | 	Database version: 2.3.232
+ms-notificaciones-1  | 	Autocommit mode: undefined/unknown
+ms-notificaciones-1  | 	Isolation level: undefined/unknown
+ms-notificaciones-1  | 	Minimum pool size: undefined/unknown
+ms-notificaciones-1  | 	Maximum pool size: undefined/unknown
+ms-notificaciones-1  | 18:19:04.789 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ms-notificaciones-1  | 18:19:04.828 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ms-notificaciones-1  | 18:19:05.345 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ms-notificaciones-1  | 18:19:05.993 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-notificaciones-1  | 18:19:07.122 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+ms-notificaciones-1  | 18:19:07.123 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-notificaciones-1  | 18:19:07.223 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#497cf31a:0/SimpleConnection@65067d90 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=54132]
+ms-disponibilidad-1  | 18:10:58.438 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8081 (http)
+ms-disponibilidad-1  | 18:10:58.515 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-disponibilidad-1  | 18:10:58.519 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-disponibilidad-1  | 18:10:58.602 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-disponibilidad-1  | 18:10:58.608 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4868 ms
+ms-disponibilidad-1  | 18:10:59.319 INFO  [main] o.h.j.i.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ms-disponibilidad-1  | 18:10:59.886 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+ms-disponibilidad-1  | 18:11:00.104 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+ms-disponibilidad-1  | 18:11:01.165 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+ms-notificaciones-1  | 18:19:07.372 INFO  [main] c.r.n.Application - Started Application in 7.736 seconds (process running for 8.405)
+ms-notificaciones-1  | 18:19:08.079 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - NOTIFICACION_PROCESADA eventoId=ec1c33df-a1d4-43c7-8b1f-dbbcfa8c9066 reservaId=206c3157-0e04-4d2c-9693-832261f34a2b queue=reservas.notificaciones.queue
+ms-disponibilidad-1  | 18:11:01.262 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-disponibilidad-1  | 18:11:01.482 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/disponibilidad user=SA
+ms-disponibilidad-1  | 18:11:01.484 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-disponibilidad-1  | 18:11:01.535 INFO  [main] o.h.o.connections.pooling - HHH10001005: Database info:
+ms-disponibilidad-1  | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+ms-disponibilidad-1  | 	Database driver: undefined/unknown
+ms-disponibilidad-1  | 	Database version: 2.3.232
+ms-disponibilidad-1  | 	Autocommit mode: undefined/unknown
+ms-disponibilidad-1  | 	Isolation level: undefined/unknown
+ms-auditoria-1       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+ms-auditoria-1       |  =========|_|==============|___/=/_/_/_/
+ms-auditoria-1       |
+ms-auditoria-1       |  :: Spring Boot ::                (v3.5.7)
+ms-auditoria-1       |
+ms-auditoria-1       | 18:19:00.354 INFO  [main] c.r.auditoria.Application - Starting Application v1.0.0 using Java 21.0.11 with PID 1 (/app/app.jar started by ? in /app)
+ms-auditoria-1       | 18:19:00.356 INFO  [main] c.r.auditoria.Application - The following 1 profile is active: "local"
+ms-auditoria-1       | 18:19:02.287 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ms-auditoria-1       | 18:19:02.371 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+ms-auditoria-1       | 18:19:03.434 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8083 (http)
+ms-auditoria-1       | 18:19:03.455 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+ms-auditoria-1       | 18:19:03.466 INFO  [main] o.a.c.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.48]
+ms-auditoria-1       | 18:19:03.489 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ms-auditoria-1       | 18:19:03.490 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2975 ms
+ms-auditoria-1       | 18:19:03.942 INFO  [main] o.h.j.i.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ms-auditoria-1       | 18:19:04.038 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.33.Final
+ms-auditoria-1       | 18:19:04.061 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+ms-auditoria-1       | 18:19:04.253 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+ms-auditoria-1       | 18:19:04.268 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ms-auditoria-1       | 18:19:04.422 INFO  [main] c.z.h.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:/data/auditoria user=SA
+ms-auditoria-1       | 18:19:04.424 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ms-auditoria-1       | 18:19:04.466 INFO  [main] o.h.o.connections.pooling - HHH10001005: Database info:
+ms-auditoria-1       | 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+ms-disponibilidad-1  | 	Minimum pool size: undefined/unknown
+ms-disponibilidad-1  | 	Maximum pool size: undefined/unknown
+ms-disponibilidad-1  | 18:11:02.293 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ms-disponibilidad-1  | 18:11:02.350 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ms-disponibilidad-1  | 18:11:03.219 INFO  [main] o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+ms-disponibilidad-1  | 18:11:04.487 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ms-disponibilidad-1  | 18:11:05.058 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-disponibilidad-1  | 18:11:05.720 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+ms-disponibilidad-1  | 18:11:05.745 INFO  [main] c.r.d.Application - Started Application in 13.063 seconds (process running for 14.378)
+ms-disponibilidad-1  | 18:11:05.883 INFO  [main] c.r.d.MesaSeed - MESAS_SEMBRADAS cantidad=5
+ms-disponibilidad-1  | 18:11:22.085 INFO  [http-nio-8081-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-disponibilidad-1  | 18:11:22.085 INFO  [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-disponibilidad-1  | 18:11:22.086 INFO  [http-nio-8081-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ms-disponibilidad-1  | 18:12:24.165 INFO  [http-nio-8081-exec-5] c.r.d.DisponibilidadController - MESA_ASIGNADA reservaId=e66326b4-87e3-486e-b619-fa054089a3cf mesaId=mesa-02
+ms-disponibilidad-1  | 18:18:34.810 INFO  [http-nio-8081-exec-1] c.r.d.DisponibilidadController - MESA_ASIGNADA reservaId=206c3157-0e04-4d2c-9693-832261f34a2b mesaId=mesa-05
+ms-auditoria-1       | 	Database driver: undefined/unknown
+ms-auditoria-1       | 	Database version: 2.3.232
+ms-auditoria-1       | 	Autocommit mode: undefined/unknown
+ms-auditoria-1       | 	Isolation level: undefined/unknown
+ms-auditoria-1       | 	Minimum pool size: undefined/unknown
+ms-auditoria-1       | 	Maximum pool size: undefined/unknown
+ms-auditoria-1       | 18:19:05.083 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+ms-auditoria-1       | 18:19:05.128 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ms-auditoria-1       | 18:19:05.568 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ms-auditoria-1       | 18:19:06.345 INFO  [main] o.s.b.a.e.w.EndpointLinksResolver - Exposing 2 endpoints beneath base path '/actuator'
+ms-auditoria-1       | 18:19:07.251 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+ms-auditoria-1       | 18:19:07.263 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-auditoria-1       | 18:19:07.330 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#221961f2:0/SimpleConnection@2f4b2ee3 [delegate=amqp://reservas@172.23.0.2:5672/, localPort=46746]
+ms-auditoria-1       | 18:19:07.495 INFO  [main] c.r.auditoria.Application - Started Application in 7.865 seconds (process running for 8.48)
+ms-auditoria-1       | 18:19:08.113 INFO  [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - AUDITORIA_PROCESADA eventoId=ec1c33df-a1d4-43c7-8b1f-dbbcfa8c9066 reservaId=206c3157-0e04-4d2c-9693-832261f34a2b queue=reservas.auditoria.queue

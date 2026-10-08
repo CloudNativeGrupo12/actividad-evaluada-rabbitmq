@@ -1,0 +1,7 @@
+{
+  "publicacion": "Adaptación EP3 sin commit ni push en ambos repositorios",
+  "localTemplate": "Compose resuelve H2 para los cuatro dominios desde .env.example",
+  "frontendBuild": "ng build production: success; URLs localhost reales",
+  "fecha": "2026-10-08",
+  "azureScript": "Sintaxis PowerShell válida; nueva ejecución Graph requiere login por InteractionRequired"
+}

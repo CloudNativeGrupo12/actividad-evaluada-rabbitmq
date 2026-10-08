@@ -1,0 +1,10 @@
+{
+  "fuente": "docker compose exec -T rabbitmq rabbitmqctl list_queues name messages_ready consumers --formatter=json",
+  "fechaPrueba": "2026-10-08",
+  "reservaId": "206c3157-0e04-4d2c-9693-832261f34a2b",
+  "colas": [
+    {"name": "reservas.notificaciones.queue", "messages_ready": 1, "consumers": 0},
+    {"name": "reservas.auditoria.queue", "messages_ready": 1, "consumers": 0},
+    {"name": "reservas.dlq", "messages_ready": 2, "consumers": 0}
+  ]
+}

@@ -13,20 +13,24 @@ public class RabbitTopology {
     public static final String DLQ = "reservas.dlq";
     public static final String DLQ_ROUTING_KEY = "reservas.dlq";
 
-    @Bean
-    public Declarables reservasTopology() {
-        var exchange = new DirectExchange(EXCHANGE, true, false);
-        var notificaciones = QueueBuilder.durable(NOTIFICACIONES)
-                .withArgument("x-dead-letter-exchange", DLX)
-                .withArgument("x-dead-letter-routing-key", DLQ_ROUTING_KEY).build();
-        var auditoria = QueueBuilder.durable(AUDITORIA)
-                .withArgument("x-dead-letter-exchange", DLX)
-                .withArgument("x-dead-letter-routing-key", DLQ_ROUTING_KEY).build();
-        var dlx = new FanoutExchange(DLX, true, false);
-        var dlq = QueueBuilder.durable(DLQ).build();
-        return new Declarables(exchange, notificaciones, auditoria, dlx, dlq,
-                BindingBuilder.bind(notificaciones).to(exchange).with(ROUTING_KEY),
-                BindingBuilder.bind(auditoria).to(exchange).with(ROUTING_KEY),
-                BindingBuilder.bind(dlq).to(dlx));
+    @Bean public DirectExchange reservasExchange() { return new DirectExchange(EXCHANGE, true, false); }
+    @Bean public FanoutExchange reservasDeadLetterExchange() { return new FanoutExchange(DLX, true, false); }
+
+    // Cada dominio recibe su propia copia; los mensajes rechazados terminan en la DLQ.
+    @Bean public Queue notificacionesQueue() { return colaConDlq(NOTIFICACIONES); }
+    @Bean public Queue auditoriaQueue() { return colaConDlq(AUDITORIA); }
+    @Bean public Queue deadLetterQueue() { return QueueBuilder.durable(DLQ).build(); }
+
+    @Bean public Binding notificacionesBinding() {
+        return BindingBuilder.bind(notificacionesQueue()).to(reservasExchange()).with(ROUTING_KEY);
+    }
+    @Bean public Binding auditoriaBinding() {
+        return BindingBuilder.bind(auditoriaQueue()).to(reservasExchange()).with(ROUTING_KEY);
+    }
+    @Bean public Binding deadLetterBinding() {
+        return BindingBuilder.bind(deadLetterQueue()).to(reservasDeadLetterExchange());
+    }
+    private Queue colaConDlq(String nombre) {
+        return QueueBuilder.durable(nombre).deadLetterExchange(DLX).deadLetterRoutingKey(DLQ_ROUTING_KEY).build();
     }
 }

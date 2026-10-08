@@ -1,0 +1,2 @@
+ms-notificaciones-1  | 18:11:38.352 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.n.ReservaConsumer - DLQ_REDIRECT queue=reservas.notificaciones.queue dlx=reservas.dlx dlq=reservas.dlq mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa
+ms-auditoria-1       | 18:11:38.349 ERROR [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.r.a.ReservaConsumer - DLQ_REDIRECT queue=reservas.auditoria.queue dlx=reservas.dlx dlq=reservas.dlq mensajeId=ep3-dlq-8a6b4ef1-dc77-4276-b570-2b841f5dfbaa
