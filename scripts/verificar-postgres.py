@@ -18,7 +18,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reserva-id')
     parser.add_argument('--despues-reinicio', action='store_true')
+    parser.add_argument('--archivo-evidencia', help='Nombre .json en evidencias/ep3 para conservar ejecuciones anteriores')
     args = parser.parse_args()
+    if args.archivo_evidencia and (Path(args.archivo_evidencia).name != args.archivo_evidencia
+                                   or not args.archivo_evidencia.endswith('.json')
+                                   or '/' in args.archivo_evidencia or '\\' in args.archivo_evidencia):
+        parser.error('--archivo-evidencia debe ser un nombre .json sin directorios')
     root = Path(__file__).resolve().parents[1]
     config = dict(line.split('=', 1) for line in
                   (root / '.env').read_text(encoding='utf-8-sig').splitlines()
@@ -85,7 +90,7 @@ def main():
     evidence['verificado'] = True
     directory = root / 'evidencias' / 'ep3'
     directory.mkdir(parents=True, exist_ok=True)
-    name = 'postgres-persistencia.json' if args.despues_reinicio else 'postgres.json'
+    name = args.archivo_evidencia or ('postgres-persistencia.json' if args.despues_reinicio else 'postgres.json')
     (directory / name).write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('Evidencia guardada: evidencias/ep3/' + name)
 

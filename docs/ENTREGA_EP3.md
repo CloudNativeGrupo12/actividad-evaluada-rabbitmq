@@ -15,6 +15,7 @@ La implementación y sus evidencias se detallan en [EP3](EP3.md). Esta lista dis
 - [x] `.env` y solicitudes AWS con secretos excluidos de Git y del contexto Docker.
 - [x] `.env.example` usa H2 en perfil local; ejemplos HTTP reciben bearer desde una variable de entorno.
 - [x] Revisar y publicar los cambios de ambos repositorios en `feature/ep3-rubrica`, incluyendo código, documentación y evidencias.
+- [x] Desplegar Angular y los cinco microservicios en AWS, con HTTPS, login Microsoft y reserva completa comprobada sobre RDS.
 
 ## Falta cerrar
 
@@ -41,8 +42,8 @@ Las capturas y resultados están en `evidencias/ep3`. La secuencia de consumidor
 
 ## Preparación el día de la presentación
 
-Iniciar el laboratorio AWS y comprobar que RDS esté disponible. La regla de acceso a PostgreSQL permite la IPv4 pública de la demostración; si la red cambia, revisar esa regla antes de la clase. Comprobar salud de las cinco APIs, login y lectura de reservas antes de comenzar. RDS permanece encendida y consume recursos/créditos del laboratorio.
+Iniciar el laboratorio AWS, comprobar que EC2 esté en ejecución y RDS disponible y abrir [la aplicación pública](https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com). Comprobar salud de las cinco APIs, login y lectura de reservas antes de comenzar. El backend conecta a RDS desde su security group; la regla IPv4 `/32` solo afecta las comprobaciones SQL y SSH desde el equipo de desarrollo. Los recursos desplegados consumen créditos del laboratorio.
 
 Al repetir una operación administrativa con Azure CLI, Microsoft devolvió `InteractionRequired` por evaluación continua de acceso. Si aparece ese resultado, completar otra autenticación interactiva con `az login`; no modificar ni evitar la política de la institución. La configuración de la aplicación y las evidencias ya verificadas están conservadas.
 
-El entorno de la evaluación usa Angular y APIs en localhost, con Azure Entra ID y RDS cloud. La pauta suministrada exige base de datos cloud y entrega del código por GitHub; no especifica hosting público de Angular ni de los microservicios.
+El entorno entregable usa Angular y APIs en AWS por HTTPS, Azure Entra ID y RDS cloud. La [guía AWS](DESPLIEGUE_AWS.md) incluye la arquitectura y los comandos para mantenerlo. La reserva pública y sus comprobaciones están en `evidencias/ep3/*aws-public*`; las evidencias previas conservan el recorrido local y las pruebas de fallos.

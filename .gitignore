@@ -9,3 +9,8 @@
 .project
 .classpath
 **/*.log
+**/__pycache__/
+*.pem
+*.key
+cloud.env
+app.tar.gz

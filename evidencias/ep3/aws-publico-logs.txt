@@ -1,0 +1,32 @@
+NAME                                       IMAGE                                    COMMAND                  SERVICE             CREATED          STATUS                    PORTS
+ep3-reservas-publico-mailpit-1             axllent/mailpit:v1.27.10                 "/mailpit"               mailpit             13 minutes ago   Up 13 minutes (healthy)   1025/tcp, 1110/tcp, 8025/tcp
+ep3-reservas-publico-ms-admin-rabbitmq-1   ep3-reservas-publico-ms-admin-rabbitmq   "java -jar /app/app.…"   ms-admin-rabbitmq   4 minutes ago    Up 4 minutes
+ep3-reservas-publico-ms-auditoria-1        ep3-reservas-publico-ms-auditoria        "java -jar /app/app.…"   ms-auditoria        4 minutes ago    Up 4 minutes
+ep3-reservas-publico-ms-disponibilidad-1   ep3-reservas-publico-ms-disponibilidad   "java -jar /app/app.…"   ms-disponibilidad   4 minutes ago    Up 4 minutes
+ep3-reservas-publico-ms-notificaciones-1   ep3-reservas-publico-ms-notificaciones   "java -jar /app/app.…"   ms-notificaciones   4 minutes ago    Up 4 minutes
+ep3-reservas-publico-ms-reservas-1         ep3-reservas-publico-ms-reservas         "java -jar /app/app.…"   ms-reservas         4 minutes ago    Up 4 minutes
+ep3-reservas-publico-rabbitmq-1            rabbitmq:4.1.4-management                "docker-entrypoint.s…"   rabbitmq            13 minutes ago   Up 13 minutes (healthy)   4369/tcp, 5671-5672/tcp, 15671-15672/tcp, 15691-15692/tcp, 25672/tcp
+ep3-reservas-publico-web-1                 nginx:1.28-alpine                        "/docker-entrypoint.…"   web                 13 minutes ago   Up 13 minutes             0.0.0.0:80->80/tcp, [::]:80->80/tcp
+ms-notificaciones-1  | 19:34:12.796 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#72bef795:0/SimpleConnection@786d8b3b [delegate=amqp://reservas_cloud@172.18.0.3:5672/, localPort=39310]
+ms-notificaciones-1  | 19:34:13.491 INFO  [main] c.r.n.Application - Started Application in 66.423 seconds (process running for 73.569)
+ms-notificaciones-1  | 19:36:31.075 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-notificaciones-1  | 19:36:31.076 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-notificaciones-1  | 19:36:31.078 INFO  [http-nio-8082-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+ms-reservas-1        | 19:36:10.292 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-reservas-1        | 19:36:10.295 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-reservas-1        | 19:36:10.300 INFO  [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+ms-reservas-1        | 19:36:29.544 INFO  [http-nio-8080-exec-3] o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [rabbitmq:5672]
+ms-reservas-1        | 19:36:29.638 INFO  [http-nio-8080-exec-3] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1509bd56:0/SimpleConnection@35e38ba4 [delegate=amqp://reservas_cloud@172.18.0.3:5672/, localPort=41312]
+ms-auditoria-1       | 19:34:11.917 INFO  [main] o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#7e092ca:0/SimpleConnection@4d5d6297 [delegate=amqp://reservas_cloud@172.18.0.3:5672/, localPort=42738]
+ms-auditoria-1       | 19:34:12.487 INFO  [main] c.r.auditoria.Application - Started Application in 64.805 seconds (process running for 72.653)
+ms-auditoria-1       | 19:36:32.103 INFO  [http-nio-8083-exec-2] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ms-auditoria-1       | 19:36:32.104 INFO  [http-nio-8083-exec-2] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ms-auditoria-1       | 19:36:32.106 INFO  [http-nio-8083-exec-2] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	messages_ready	messages_unacknowledged	consumers
+reservas.notificaciones.queue	0	0	1
+reservas.auditoria.queue	0	0	1
+reservas.dlq	0	0	0
+Deleting queue 'ep3.demo.aws-publico' on vhost '/' if queue is empty and if queue is unused ...
+Queue was successfully deleted with 0 ready messages

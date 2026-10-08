@@ -2,6 +2,8 @@
 
 ## Evaluación Parcial 3
 
+**Probar en AWS:** [abrir la aplicación por HTTPS](https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com). Angular y los cinco microservicios están desplegados en EC2, con RabbitMQ, SMTP de demostración y cuatro bases en RDS. Iniciar sesión con Microsoft del tenant institucional. Ver [despliegue público y operación](docs/DESPLIEGUE_AWS.md).
+
 La versión actual prepara los ocho indicadores de la pauta EP3 de DSY1107. Consulta [la matriz de cumplimiento y guía de demostración](docs/EP3.md) para configuración Azure/AWS mediante CLI, pruebas y entrega. El backend ahora tiene cinco microservicios, JPA, JWT y DLQ; los informes anteriores conservan el estado de la actividad previa.
 
 Antes de iniciar Compose, ejecutar `scripts/configurar-azure.ps1` con una sesión Azure válida o crear `.env` a partir de `.env.example` y completar los identificadores. Todas las APIs de negocio requieren un access token de Entra ID, incluso en local. El perfil local usa H2 persistente y el perfil cloud usa cuatro bases PostgreSQL separadas.

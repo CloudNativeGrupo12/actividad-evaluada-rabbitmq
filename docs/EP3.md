@@ -8,6 +8,8 @@ La pauta indica entrega en parejas y los informes anteriores registran cuatro in
 
 El [cierre de entrega y guion de presentación](ENTREGA_EP3.md) reúne los pendientes formales, el recorrido sugerido y las comprobaciones previas a la clase.
 
+La versión pública está disponible en [AWS por HTTPS](https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com): Angular y las cinco APIs se ejecutan en EC2, con RabbitMQ, Mailpit y RDS. Se verificó login Microsoft y una reserva completa desde esa URL. La [guía de despliegue](DESPLIEGUE_AWS.md) describe infraestructura, comandos, operación y evidencias; los pasos de localhost siguientes corresponden al entorno de desarrollo.
+
 ## Indicadores de la pauta y su implementación
 
 | Indicador | Peso | Código o evidencia |

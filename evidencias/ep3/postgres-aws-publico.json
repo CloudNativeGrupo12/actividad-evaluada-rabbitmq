@@ -1,0 +1,53 @@
+{
+  "fechaUTC": "2026-10-08T19:32:01.341217+00:00",
+  "perfil": "cloud",
+  "reservaId": "fd2f7e70-fd85-48ec-a911-14c035a9e952",
+  "despuesReinicio": false,
+  "bases": {
+    "reservas": {
+      "host": "ep3-reservas-postgres.c5amoia2y5ve.us-east-1.rds.amazonaws.com",
+      "tls": true,
+      "protocolo": "TLSv1.3",
+      "versionPostgreSQL": "18.3",
+      "tablas": {
+        "reservas": 2
+      },
+      "eventoId": "f9a62a7c-d884-4643-8e6e-deb98ddb5435",
+      "publicacion": "PUBLICADA"
+    },
+    "disponibilidad": {
+      "host": "ep3-reservas-postgres.c5amoia2y5ve.us-east-1.rds.amazonaws.com",
+      "tls": true,
+      "protocolo": "TLSv1.3",
+      "versionPostgreSQL": "18.3",
+      "tablas": {
+        "mesas": 5,
+        "asignaciones": 2
+      },
+      "mesaId": "mesa-02"
+    },
+    "notificaciones": {
+      "host": "ep3-reservas-postgres.c5amoia2y5ve.us-east-1.rds.amazonaws.com",
+      "tls": true,
+      "protocolo": "TLSv1.3",
+      "versionPostgreSQL": "18.3",
+      "tablas": {
+        "procesados": 2
+      },
+      "eventoId": "f9a62a7c-d884-4643-8e6e-deb98ddb5435",
+      "resultado": "CORREO_ENVIADO"
+    },
+    "auditoria": {
+      "host": "ep3-reservas-postgres.c5amoia2y5ve.us-east-1.rds.amazonaws.com",
+      "tls": true,
+      "protocolo": "TLSv1.3",
+      "versionPostgreSQL": "18.3",
+      "tablas": {
+        "procesados": 2
+      },
+      "eventoId": "f9a62a7c-d884-4643-8e6e-deb98ddb5435",
+      "resultado": "RESERVA_CONFIRMADA_REGISTRADA"
+    }
+  },
+  "verificado": true
+}

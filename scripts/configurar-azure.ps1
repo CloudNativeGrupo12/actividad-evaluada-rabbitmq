@@ -53,7 +53,11 @@ if ($spaApps.Count -eq 0) {
     }
 } else {
     $spaApp = $spaApps[0]
-    if ($RedirectUri -notin $spaApp.spa.redirectUris) { throw 'El registro SPA existente no contiene el redirect URI solicitado.' }
+    if ($RedirectUri -notin $spaApp.spa.redirectUris) {
+        Send-Graph 'PATCH' ('https://graph.microsoft.com/v1.0/applications/' + $spaApp.id) @{
+            spa = @{redirectUris = @($spaApp.spa.redirectUris) + @($RedirectUri)}
+        } | Out-Null
+    }
 }
 # Preautorizar únicamente esta SPA para el scope de la API; no se crean secretos.
 $apiCurrent = Invoke-AzJson @('ad', 'app', 'show', '--id', $apiApp.appId)

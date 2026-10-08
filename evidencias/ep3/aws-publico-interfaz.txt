@@ -1,0 +1,110 @@
+Browser tab: 1, Title: "FrontendReservas", URL: "https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/reservas".
+1 AXWebArea FrontendReservas, URL: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/reservas
+	2 container
+		3 link Description: Reservas, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/
+		4 link Description: Reservas, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/reservas
+		5 link Description: Disponibilidad, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/disponibilidad
+		6 link Description: Notificaciones, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/notificaciones
+		7 link Description: Auditoría, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/auditoria
+		8 link Description: Admin RabbitMQ, Value: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/admin
+		9 button Cerrar sesión
+	10 container
+		11 heading Reservas, Value: 1
+			12 text Reservas
+		13 heading Nueva reserva, Value: 2
+			14 text Nueva reserva
+		15 container
+			16 text Cliente ID
+			17 text field (settable) Cliente ID
+			18 text Email del cliente
+			19 text field (settable) Email del cliente
+			20 text Fecha
+			21 date field (settable) Fecha
+				22 container
+					23 stepper
+					24 stepper
+					25 stepper
+				26 pop up button Mostrar selector de fecha Mostrar selector de fecha
+			27 text Hora inicio
+			28 time field (settable) Hora inicio
+				29 container
+					30 stepper
+					31 stepper
+				32 pop up button Mostrar selector de hora Mostrar selector de hora
+			33 text Hora fin
+			34 time field (settable) Hora fin
+				35 container
+					36 stepper
+					37 stepper
+				38 pop up button Mostrar selector de hora Mostrar selector de hora
+			39 text Personas (1-8)
+			40 stepper (settable, integer) Personas (1-8), Value: 1
+			41 button (disabled) Crear reserva
+		42 heading Historial de reservas, Value: 2
+			43 text Historial de reservas
+		44 table
+			45 row
+				46 cell
+					47 text Reserva
+				48 cell
+					49 text Cliente
+				50 cell
+					51 text Mesa
+				52 cell
+					53 text Fecha
+				54 cell
+					55 text Inicio
+				56 cell
+					57 text Fin
+				58 cell
+					59 text Personas
+				60 cell
+					61 text Estado
+				62 cell
+					63 text Publicación
+			64 row
+				65 cell
+					66 text 53c82380-1215-4002-9a78-0725af0cdf6f
+				67 cell
+					68 text ep3-rds-20261008
+					69 text cliente@example.com
+				70 cell
+					71 text mesa-02
+				72 cell
+					73 text 2026-10-18
+				74 cell
+					75 text 18:00:00
+				76 cell
+					77 text 20:00:00
+				78 cell
+					79 text 4
+				80 cell
+					81 text CONFIRMADA
+				82 cell
+					83 text PUBLICADA
+				84 cell
+					85 button Reintentar publicación
+			86 row
+				87 cell
+					88 text fd2f7e70-fd85-48ec-a911-14c035a9e952
+				89 cell
+					90 text ep3-aws-publico-20261008
+					91 text cliente@example.com
+				92 cell
+					93 text mesa-02
+				94 cell
+					95 text 2026-10-20
+				96 cell
+					97 text 18:00:00
+				98 cell
+					99 text 20:00:00
+				100 cell
+					101 text 4
+				102 cell
+					103 text CONFIRMADA
+				104 cell
+					105 text PUBLICADA
+				106 cell
+					107 button Reintentar publicación
+
+The focused UI element is 4 link Description: Reservas, URL: 6yyp6d2s6j.execute-api.us-east-1.amazonaws.com/reservas

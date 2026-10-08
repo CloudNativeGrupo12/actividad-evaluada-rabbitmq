@@ -1,6 +1,8 @@
 # PENDIENTES PARA CONFIGURAR AWS Y AZURE (Fase 6)
 
 ## Estado
+La aplicación ya está desplegada en [AWS por HTTPS](https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com), con Angular, los cinco microservicios, RabbitMQ y Mailpit en EC2 y las cuatro bases en RDS. Login y reserva pública verificados. Consultar [DESPLIEGUE_AWS](docs/DESPLIEGUE_AWS.md); la lista histórica que sigue se conserva como antecedente.
+
 Al 8 de octubre de 2026, Azure Entra ID tiene los registros API y SPA creados y aplicados al frontend y `.env` local; login, llamadas JWT desde Angular y sesión Azure CLI verificados. RDS `ep3-reservas-postgres` está disponible en `us-east-1`, con cuatro bases PostgreSQL 18.3 y los microservicios en perfil cloud. Se verificaron reserva, asignación, correo y auditoría, incluyendo persistencia después de reiniciar los cuatro microservicios. Usar los scripts, evidencias y configuración actual de [EP3](docs/EP3.md); los ejemplos de fases siguientes son antecedentes. Renovar las credenciales temporales al reiniciar el laboratorio y controlar el consumo de RDS.
 
 ## 1. Base de Datos PostgreSQL (AWS RDS)

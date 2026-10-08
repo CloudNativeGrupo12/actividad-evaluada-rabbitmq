@@ -1,0 +1,21 @@
+{
+  "fechaUTC": "2026-10-08T19:36:20.4321919Z",
+  "urlPublica": "https://6yyp6d2s6j.execute-api.us-east-1.amazonaws.com",
+  "region": "us-east-1",
+  "instanceId": "i-02e003bf20582716c",
+  "apiId": "6yyp6d2s6j",
+  "vpcLinkId": "j2c9xi",
+  "frontendHTTP": 200,
+  "salud": {
+    "admin": "UP",
+    "disponibilidad": "UP",
+    "auditoria": "UP",
+    "notificaciones": "UP",
+    "reservas": "UP"
+  },
+  "apiSinJWT": 401,
+  "reservaId": "fd2f7e70-fd85-48ec-a911-14c035a9e952",
+  "eventoId": "f9a62a7c-d884-4643-8e6e-deb98ddb5435",
+  "verificacionRDS": true,
+  "administradorJWT": "Cola ep3.demo.aws-publico creada desde Angular; limpieza interna condicionada a cola vacía y sin consumidores"
+}
