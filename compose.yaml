@@ -1,10 +1,13 @@
 name: reservas-rabbitmq
 x-app: &app
   restart: unless-stopped
+  env_file:
+    - .env
   environment: &env
     RABBIT_HOST: rabbitmq
     RABBIT_USER: reservas
     RABBIT_PASSWORD: reservas-demo
+    SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-local}
   depends_on:
     rabbitmq:
       condition: service_healthy
